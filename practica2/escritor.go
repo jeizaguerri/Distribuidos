@@ -25,7 +25,7 @@ func main() {
 
 	
 
-	ricart := ra.New(me, usersFile)
+	ricart := ra.New(me, 1, usersFile)
 	go ra.TratarPeticiones(ricart)
 
 	var i int

@@ -16,15 +16,20 @@ import (
 
 const N = 2
 
+
 type Request struct{
     Clock   int
     Pid     int   
+    op_t    int
 }
 
 type Reply struct{}
 
+//const Exclude = [2][2]bool {{false,true},{true,true}}
+
 type RASharedDB struct {
     me  int//Numero unico
+    op_type     int //Read 0, Write 1
 
     OurSeqNum   int
     HigSeqNum   int     //Numero de secuencia mas alto visto en un mensaje REQUEST recibido
@@ -35,16 +40,16 @@ type RASharedDB struct {
     done        chan bool
     chrep       chan bool
     Mutex       sync.Mutex // mutex para proteger concurrencia sobre las variables
-    
+    Exclude     [2][2]bool
     // TODO: completar
 }
 
 
 
-func New(me int, usersFile string) (*RASharedDB) {
+func New(me int, op_type int, usersFile string) (*RASharedDB) {
     messageTypes := []ms.Message{Request{}, Reply{}}
     msgs := ms.New(me, usersFile, messageTypes)
-    ra := RASharedDB{me, 0, 0, 0, false, [N+1]bool{}, &msgs,  make(chan bool),  make(chan bool), sync.Mutex{}}
+    ra := RASharedDB{me, op_type, 0, 0, 0, false, [N+1]bool{}, &msgs,  make(chan bool),  make(chan bool), sync.Mutex{}, [2][2]bool{{false,true},{true,true}}}
     return &ra
 }
 
@@ -63,7 +68,7 @@ func PreProtocol(ra *RASharedDB) (){
     //Enviamos mensaje a todos los demás procesos
     for j := 1; j <= N; j++ {
         if(j != ra.me){
-            ra.ms.Send(j, Request{ra.OurSeqNum,ra.me})
+            ra.ms.Send(j, Request{ra.OurSeqNum,ra.me, ra.op_type})
         }
     }
     fmt.Println("Peticiones enviadas")
@@ -117,7 +122,7 @@ func TratarPeticiones(ra *RASharedDB) (){
             
             //Esperar al mutex para acceder a las variables
             ra.Mutex.Lock()
-            defer_it = ra.ReqCS && ((req.Clock > ra.OurSeqNum) || (req.Clock == ra.OurSeqNum && req.Pid > ra.me))
+            defer_it = ra.ReqCS && ((req.Clock > ra.OurSeqNum) || (req.Clock == ra.OurSeqNum && req.Pid > ra.me)) && (ra.Exclude[ra.op_type][req.op_t])
             ra.Mutex.Unlock()
             if(defer_it){
                 ra.RepDefd[req.Pid] = true
