@@ -16,23 +16,18 @@ import (
 
 const N = 2
 
-
 type Request struct{
-    Clock   [N+1]int
+    Clock   int
     Pid     int   
-    op_t    int
 }
 
 type Reply struct{}
 
-//const Exclude = [2][2]bool {{false,true},{true,true}}
-
 type RASharedDB struct {
     me  int//Numero unico
-    op_type     int //Read 0, Write 1
 
-    OurSeqNum   [N+1]int
-    HigSeqNum   [N+1]int    //Numero de secuencia mas alto visto en un mensaje REQUEST recibido
+    OurSeqNum   int
+    HigSeqNum   int     //Numero de secuencia mas alto visto en un mensaje REQUEST recibido
     OutRepCnt   int     //Numero de respuestas esperadas
     ReqCS       bool    //Pidiendo entrar a la SC
     RepDefd     [N+1]bool   //RepDefd[j] = true -> j está esperando a un mensaje de respuesta
@@ -40,40 +35,16 @@ type RASharedDB struct {
     done        chan bool
     chrep       chan bool
     Mutex       sync.Mutex // mutex para proteger concurrencia sobre las variables
-    Exclude     [2][2]bool
+    
     // TODO: completar
 }
-    
-    
-
-func mayor_que(clk1 [N+1]int, clk2 [N+1]int) (bool){
-    for i := 1; i <= N; i++ {
-        if(clk1[i] < clk2[i]){
-            return false
-        }
-    }
-    return true
-}
-
-func igual_que(clk1 [N+1]int, clk2 [N+1]int) (bool){
-    for i := 1; i <= N; i++ {
-        if(clk1[i] != clk2[i]){
-            return false
-        }
-    }
-    return true
-}
-
-func son_comparables(clk1 [N+1]int, clk2 [N+1]int) (bool){
-    return mayor_que(clk1,clk2) || mayor_que(clk2,clk1)
-}
 
 
-func New(me int, op_type int, usersFile string) (*RASharedDB) {
 
+func New(me int, usersFile string) (*RASharedDB) {
     messageTypes := []ms.Message{Request{}, Reply{}}
     msgs := ms.New(me, usersFile, messageTypes)
-    ra := RASharedDB{me, op_type, [N+1]int{}, [N+1]int{}, 0, false, [N+1]bool{}, &msgs,  make(chan bool),  make(chan bool), sync.Mutex{}, [2][2]bool{{false,true},{true,true}}}
+    ra := RASharedDB{me, 0, 0, 0, false, [N+1]bool{}, &msgs,  make(chan bool),  make(chan bool), sync.Mutex{}}
     return &ra
 }
 
@@ -84,8 +55,7 @@ func PreProtocol(ra *RASharedDB) (){
     //Esperamos al mutex para modificar las variables
     ra.Mutex.Lock()
     ra.ReqCS = true
-    ra.OurSeqNum = ra.HigSeqNum
-    ra.OurSeqNum[ra.me] = ra.OurSeqNum[ra.me] +1
+    ra.OurSeqNum = ra.HigSeqNum + 1;
     ra.Mutex.Unlock()
     fmt.Println(ra.me," en la previa")
     ra.OutRepCnt = N -1 ;
@@ -93,7 +63,7 @@ func PreProtocol(ra *RASharedDB) (){
     //Enviamos mensaje a todos los demás procesos
     for j := 1; j <= N; j++ {
         if(j != ra.me){
-            ra.ms.Send(j, Request{ra.OurSeqNum,ra.me, ra.op_type})
+            ra.ms.Send(j, Request{ra.OurSeqNum,ra.me})
         }
     }
     fmt.Println("Peticiones enviadas")
@@ -141,29 +111,13 @@ func TratarPeticiones(ra *RASharedDB) (){
             defer_it := false
             //Actualizar maximo numero de secuencia
             var req Request = rec.(Request)
-            fmt.Println("ra: ", ra.OurSeqNum)
-            fmt.Println("req: ", req.Clock)
-            //ra.OurSeqNum[ra.me] = ra.OurSeqNum[ra.me] + 1
-            //Comparar relojes
-            if(son_comparables(ra.OurSeqNum, req.Clock)){
-                fmt.Println("Es comparable")
-                //Escoger el mayor
-                if(mayor_que(req.Clock, ra.OurSeqNum)){
-                    fmt.Println("Es mayor")
-                    ra.HigSeqNum = req.Clock
-                }
-            }else{
-                fmt.Println("No es comparable")
-                if(req.Pid > ra.me){
-                    ra.HigSeqNum = req.Clock
-
-                }
+            if(req.Clock > ra.HigSeqNum){
+                ra.HigSeqNum = req.Clock
             }
             
             //Esperar al mutex para acceder a las variables
             ra.Mutex.Lock()
-            defer_it = ra.ReqCS && ((mayor_que(req.Clock, ra.OurSeqNum)) || (igual_que(req.Clock, ra.OurSeqNum) && req.Pid > ra.me)) && (ra.Exclude[ra.op_type][req.op_t])
-
+            defer_it = ra.ReqCS && ((req.Clock > ra.OurSeqNum) || (req.Clock == ra.OurSeqNum && req.Pid > ra.me))
             ra.Mutex.Unlock()
             if(defer_it){
                 ra.RepDefd[req.Pid] = true

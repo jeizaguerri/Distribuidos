@@ -2,7 +2,6 @@
 package main
 
 import (
-	"ra"
     "fmt"
     "gf"
 	"strconv"
@@ -24,22 +23,14 @@ func main() {
 	usersFile := "ms/users.txt"
 
 	
-
-	ricart := ra.New(me, 0, usersFile)
-	go ra.TratarPeticiones(ricart)
-
+	gestor:= gf.New(me, 1, usersFile)
+	
 	var i int
 	fmt.Scanf("%d", i)
 	for{
-	//Pre - protocol
-	ra.PreProtocol(ricart)
 
 	//SC
-	gf.EscribirFichero(strconv.Itoa(ra.OurSeqNum))
-	//gestor.LeerFichero()
-	fmt.Println(me," Hola")
-
-	ra.PostProtocol(ricart)
-
+	contenido := gf.LeerFichero(gestor)
+	fmt.Println(me,": ", contenido)
 	}
 }
