@@ -70,7 +70,7 @@ func (ms *MessageSystem) Receive() (msg Message) {
 //	messageTypes es un slice con tipos de mensajes que los procesos se pueden intercambiar a través de este ms
 //
 // Hay que registrar un mensaje antes de poder utilizar (enviar o recibir)
-// Notar que se utiliza en la función New
+// Notar que se utiliza en la función NewReceive
 func Register(messageTypes []Message) {
 	for _, msgTp := range messageTypes {
 		gob.Register(msgTp)

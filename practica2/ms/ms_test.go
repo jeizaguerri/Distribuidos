@@ -10,6 +10,7 @@ package ms
 
 import (
 	"testing"
+	"ms"
 )
 
 type Request struct {
@@ -21,8 +22,8 @@ type Reply struct{
 }
 
 func TestSendReceiveMessage(t *testing.T) {
-	p1 := New(1, "./users.txt", []Message{Request{}, Reply{}})
-	p2 := New(2, "./users.txt", []Message{Request{}, Reply{}})
+	p1 := ms.New(1, "./users.txt", []ms.Message{Request{}, Reply{}})
+	p2 := ms.New(2, "./users.txt", []ms.Message{Request{}, Reply{}})
 	p1.Send(2, Request{1})
 	request := p2.Receive().(Request)
 	
