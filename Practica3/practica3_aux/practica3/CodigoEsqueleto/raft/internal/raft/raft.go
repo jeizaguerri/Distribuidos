@@ -67,6 +67,11 @@ type AplicaOperacion struct {
 	Operacion TipoOperacion
 }
 
+type EntradaLog struct{
+	State int		//Estado
+	Term int		//Mandato
+}
+
 // Tipo de dato Go que representa un solo nodo (réplica) de raft
 //
 type NodoRaft struct {
@@ -81,8 +86,19 @@ type NodoRaft struct {
 	Logger *log.Logger
 
 	// Vuestros datos aqui.
-	
+	Log []EntradaLog
 	// mirar figura 2 para descripción del estado que debe mantenre un nodo Raft
+	
+	CurrentTerm 	int		// latest term server has seen (initialized to 0 on first boot, increases monotonically)
+	VotedFor 		int		//candidateId that received vote in current
+	
+	
+	CommitIndex		int		//index of highest log entry known to be committed (initialized to 0, increases monotonically)
+	LastApplied 	int   	// index of highest log entry applied to state machine (initialized to 0, increases monotonically)
+
+	NextIndex		[]int	//for each server, index of the next log entry to send to that server (initialized to leader last log index + 1)
+	MatchIndex		[]int 	//for each server, index of highest log entry known to be replicated on server (initialized to 0, increases monotonically)
+
 }
 
 
@@ -136,7 +152,12 @@ func NuevoNodo(nodos []rpctimeout.HostPort, yo int,
 	}
 
 	// Añadir codigo de inicialización
+	nr.CurrentTerm = 0
+	nr.CommitIndex = 0
+	nr.LastApplied = 0
 	
+	nr.NextIndex = []int{}
+	nr.MatchIndex = []int{}
 
 	return nr
 }
@@ -162,7 +183,7 @@ func (nr *NodoRaft) obtenerEstado() (int, int, bool, int) {
 	var yo int = nr.Yo
 	var mandato int
 	var esLider bool
-	var idLider int =nr.IdLider
+	var idLider int = nr.IdLider
 	
 
 	// Vuestro codigo aqui
@@ -254,7 +275,12 @@ func (nr *NodoRaft) SometerOperacionRaft(operacion TipoOperacion,
 //
 type ArgsPeticionVoto struct {
 	// Vuestros datos aqui
+	Term int	//	candidate’s term
+	CandidateID int	//candidate requesting vote
+	LastLogIndex int	//index of candidate’s last log entry (§5.4)
+	LastLogTerm int	//term of candidate’s last log entry (§5.4)
 }
+
 
 // Structura de ejemplo de respuesta de RPC PedirVoto,
 //
@@ -265,6 +291,8 @@ type ArgsPeticionVoto struct {
 //
 type RespuestaPeticionVoto struct {
 	// Vuestros datos aqui
+	Term			int		//currentTerm, for candidate to update itself
+	VoteGranted		bool	//true means candidate received vote
 }
 
 
