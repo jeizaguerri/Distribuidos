@@ -1,0 +1,64 @@
+0.0.0.0_33002 -> 13:32:54.762178 raft.go:162: logger initialized
+0.0.0.0_33002 -> 13:32:59.639297 raft.go:324: Peticion de voto recibida  &{0 0 0 0} Mandato:  0 votado: -1
+0.0.0.0_33002 -> 13:32:59.639317 raft.go:354: d
+0.0.0.0_33002 -> 13:32:59.639324 raft.go:356: d1
+0.0.0.0_33002 -> 13:32:59.639330 raft.go:359: d3
+0.0.0.0_33002 -> 13:32:59.639336 raft.go:361: d4
+0.0.0.0_33002 -> 13:32:59.763127 raft.go:531: Seguidor
+0.0.0.0_33002 -> 13:32:59.763180 raft.go:535: Done recibido
+0.0.0.0_33002 -> 13:32:59.763186 raft.go:531: Seguidor
+0.0.0.0_33002 -> 13:32:59.763192 raft.go:365: d5
+0.0.0.0_33002 -> 13:32:59.763216 raft.go:369: Reply:  &{0 true}
+0.0.0.0_33002 -> 13:33:00.826081 raft.go:324: Peticion de voto recibida  &{0 0 0 0} Mandato:  0 votado: 0
+0.0.0.0_33002 -> 13:33:00.826175 raft.go:354: d
+0.0.0.0_33002 -> 13:33:00.826206 raft.go:356: d1
+0.0.0.0_33002 -> 13:33:00.826232 raft.go:359: d3
+0.0.0.0_33002 -> 13:33:00.826258 raft.go:361: d4
+0.0.0.0_33002 -> 13:33:00.826320 raft.go:365: d5
+0.0.0.0_33002 -> 13:33:00.826358 raft.go:369: Reply:  &{0 true}
+0.0.0.0_33002 -> 13:33:00.826498 raft.go:535: Done recibido
+0.0.0.0_33002 -> 13:33:00.826640 raft.go:531: Seguidor
+0.0.0.0_33002 -> 13:33:02.673756 raft.go:541: Timeout seguidor
+0.0.0.0_33002 -> 13:33:02.673773 raft.go:548: Candidato: Empezando votacion
+0.0.0.0_33002 -> 13:33:02.673788 raft.go:455: enviando peticion de voto al nodo  1
+0.0.0.0_33002 -> 13:33:02.673811 raft.go:455: enviando peticion de voto al nodo  0
+0.0.0.0_33002 -> 13:33:02.673858 raft.go:324: Peticion de voto recibida  &{0 0 0 0} Mandato:  1 votado: 2
+0.0.0.0_33002 -> 13:33:02.673873 raft.go:327: a
+0.0.0.0_33002 -> 13:33:02.673883 raft.go:369: Reply:  &{1 false}
+0.0.0.0_33002 -> 13:33:02.674500 raft.go:466: aaaa
+0.0.0.0_33002 -> 13:33:02.674518 raft.go:505: respuesta recibida: &{1 false}
+0.0.0.0_33002 -> 13:33:02.678135 raft.go:466: aaaa
+0.0.0.0_33002 -> 13:33:02.678155 raft.go:505: respuesta recibida: &{1 false}
+0.0.0.0_33002 -> 13:33:03.732908 raft.go:565: Tiempo de votacion terminado
+0.0.0.0_33002 -> 13:33:03.732929 raft.go:548: Candidato: Empezando votacion
+0.0.0.0_33002 -> 13:33:03.732952 raft.go:455: enviando peticion de voto al nodo  1
+0.0.0.0_33002 -> 13:33:03.733099 raft.go:455: enviando peticion de voto al nodo  0
+0.0.0.0_33002 -> 13:33:03.736710 raft.go:324: Peticion de voto recibida  &{0 0 0 0} Mandato:  2 votado: 2
+0.0.0.0_33002 -> 13:33:03.736726 raft.go:327: a
+0.0.0.0_33002 -> 13:33:03.736735 raft.go:369: Reply:  &{2 false}
+0.0.0.0_33002 -> 13:33:03.736794 raft.go:466: aaaa
+0.0.0.0_33002 -> 13:33:03.736818 raft.go:505: respuesta recibida: &{2 false}
+0.0.0.0_33002 -> 13:33:03.736862 raft.go:466: aaaa
+0.0.0.0_33002 -> 13:33:03.736877 raft.go:505: respuesta recibida: &{1 false}
+0.0.0.0_33002 -> 13:33:05.814019 raft.go:565: Tiempo de votacion terminado
+0.0.0.0_33002 -> 13:33:05.814043 raft.go:548: Candidato: Empezando votacion
+0.0.0.0_33002 -> 13:33:05.814063 raft.go:455: enviando peticion de voto al nodo  1
+0.0.0.0_33002 -> 13:33:05.817564 raft.go:455: enviando peticion de voto al nodo  0
+0.0.0.0_33002 -> 13:33:05.817819 raft.go:324: Peticion de voto recibida  &{0 0 0 0} Mandato:  3 votado: 2
+0.0.0.0_33002 -> 13:33:05.817838 raft.go:327: a
+0.0.0.0_33002 -> 13:33:05.817848 raft.go:369: Reply:  &{3 false}
+0.0.0.0_33002 -> 13:33:05.818090 raft.go:466: aaaa
+0.0.0.0_33002 -> 13:33:05.818108 raft.go:505: respuesta recibida: &{3 false}
+0.0.0.0_33002 -> 13:33:05.823106 raft.go:466: aaaa
+0.0.0.0_33002 -> 13:33:05.823130 raft.go:505: respuesta recibida: &{1 false}
+0.0.0.0_33002 -> 13:33:07.132295 raft.go:565: Tiempo de votacion terminado
+0.0.0.0_33002 -> 13:33:07.132325 raft.go:548: Candidato: Empezando votacion
+0.0.0.0_33002 -> 13:33:07.132356 raft.go:455: enviando peticion de voto al nodo  1
+0.0.0.0_33002 -> 13:33:07.132464 raft.go:455: enviando peticion de voto al nodo  0
+0.0.0.0_33002 -> 13:33:07.138329 raft.go:466: aaaa
+0.0.0.0_33002 -> 13:33:07.138347 raft.go:466: aaaa
+0.0.0.0_33002 -> 13:33:07.138350 raft.go:505: respuesta recibida: &{4 false}
+0.0.0.0_33002 -> 13:33:07.138365 raft.go:505: respuesta recibida: &{1 false}
+0.0.0.0_33002 -> 13:33:07.139681 raft.go:324: Peticion de voto recibida  &{0 0 0 0} Mandato:  4 votado: 2
+0.0.0.0_33002 -> 13:33:07.139699 raft.go:327: a
+0.0.0.0_33002 -> 13:33:07.139709 raft.go:369: Reply:  &{4 false}

@@ -28,10 +28,10 @@ import (
 	"io/ioutil"
 	"log"
 	"os"
-	//"crypto/rand"
+	"math/rand"
 	"sync"
 	"time"
-	//"net/rpc"
+	"net/rpc"
 
 	"raft/internal/comun/rpctimeout"
 )
@@ -50,6 +50,15 @@ const (
 
 	// Cambiar esto para salida de logs en un directorio diferente
 	kLogOutputDir = "./logs_raft/"
+
+	LIDER = 0
+	SEGUIDOR = 1
+	CANDIDATO = 2
+
+	T_HEARTBEAT = 900
+
+	T_TIMEOUT_MIN = 1000
+	T_TIMEOUT_MAX = 2000
 )
 
 type TipoOperacion struct {
@@ -99,6 +108,10 @@ type NodoRaft struct {
 	NextIndex		[]int	//for each server, index of the next log entry to send to that server (initialized to leader last log index + 1)
 	MatchIndex		[]int 	//for each server, index of highest log entry known to be replicated on server (initialized to 0, increases monotonically)
 
+	Estado			int
+
+	Done			chan bool	//Acaba la votacion
+	Votos			int // votos que recibe el nodo como candidato
 }
 
 
@@ -153,12 +166,16 @@ func NuevoNodo(nodos []rpctimeout.HostPort, yo int,
 
 	// Añadir codigo de inicialización
 	nr.CurrentTerm = 0
+	nr.VotedFor = -1
 	nr.CommitIndex = 0
 	nr.LastApplied = 0
 	
 	nr.NextIndex = []int{}
 	nr.MatchIndex = []int{}
 
+	nr.Estado = SEGUIDOR
+	nr.Done = make(chan bool)
+	go nr.GestionNodo()
 	return nr
 }
 
@@ -185,9 +202,12 @@ func (nr *NodoRaft) obtenerEstado() (int, int, bool, int) {
 	var esLider bool
 	var idLider int = nr.IdLider
 	
-
-	// Vuestro codigo aqui
-	
+	nr.Mux.Lock()
+	yo = nr.Yo
+	mandato = nr.CurrentTerm
+	esLider = nr.Estado == LIDER
+	idLider = nr.IdLider
+	nr.Mux.Unlock()
 
 	return yo, mandato, esLider, idLider
 }
@@ -298,27 +318,101 @@ type RespuestaPeticionVoto struct {
 
 // Metodo para RPC PedirVoto
 //
-func (nr *NodoRaft) PedirVoto(peticion *ArgsPeticionVoto,
+func (nr *NodoRaft) PedirVoto (peticion *ArgsPeticionVoto,
 										reply *RespuestaPeticionVoto) error {
 	// Vuestro codigo aqui
+	nr.Logger.Println("Peticion de voto recibida ", peticion, "Mandato: ", nr.CurrentTerm, "votado:", nr.VotedFor)
+	if(peticion.Term < nr.CurrentTerm){
+		//denegar
+		nr.Logger.Println("a")
+		reply.Term = nr.CurrentTerm
+		reply.VoteGranted = false
+		
 
-	return nil	
+	} else if(peticion.Term > nr.CurrentTerm){
+		//aceptar
+		nr.Logger.Println("b")
+		nr.Mux.Lock()
+		nr.Estado = SEGUIDOR
+		nr.CurrentTerm = peticion.Term
+		nr.VotedFor = peticion.CandidateID
+		
+		nr.Mux.Unlock()
+		nr.Done<-true
+
+		reply.Term = nr.CurrentTerm
+		reply.VoteGranted = true
+
+	} else if(nr.VotedFor != peticion.CandidateID && nr.VotedFor != -1){
+		//denegar
+		nr.Logger.Println("c")
+		reply.Term = nr.CurrentTerm
+		reply.VoteGranted = false
+
+	} else{
+		//aceptar
+		nr.Logger.Println("d")
+		nr.Mux.Lock()
+		nr.Logger.Println("d1")
+		nr.Estado = SEGUIDOR
+		nr.VotedFor = peticion.CandidateID
+		nr.Logger.Println("d3")
+		
+		nr.Logger.Println("d4")
+		nr.Mux.Unlock()
+		cosa := true
+		nr.Done<-cosa
+		nr.Logger.Println("d5")
+		reply.Term = nr.CurrentTerm
+		reply.VoteGranted = true
+	}
+	nr.Logger.Println("Reply: " ,reply)
+	return nil
 }
+
 
 
 type ArgAppendEntries struct {
-	// Vuestros datos aqui
+	
+	Term			int		//leader’s term
+	LeaderId		int		//so follower can redirect clients
+	PrevLogIndex	int		//index of log entry immediately preceding new ones
+	PrevLogTerm		int		//term of prevLogIndex entry
+	Entries			[]EntradaLog	//log entries to store (empty for heartbeat; may send more than one for efficiency)
+	LeaderCommit	int		//leader’s commitIndex
 }
 
 type Results struct {
-	// Vuestros datos aqui
+	
+	Term 		int			//currentTerm, for leader to update itself
+	Success		bool		//true if follower contained entry matching prevLogIndex and prevLogTerm
 }
 
 
 // Metodo de tratamiento de llamadas RPC AppendEntries
 func (nr *NodoRaft) AppendEntries(args *ArgAppendEntries,
 													  results *Results) error {
-	// Completar....
+	if(args.Term > nr.CurrentTerm){
+		//Aceptar, cambiar de mandato y reset de voted for
+		nr.Mux.Lock()
+		nr.Estado = SEGUIDOR
+		nr.CurrentTerm = args.Term
+		nr.VotedFor = -1
+		
+		nr.Mux.Unlock()
+		nr.Done<-true
+
+		results.Term = nr.CurrentTerm
+		results.Success = true
+	}else if(args.Term == nr.CurrentTerm && args.LeaderId == nr.IdLider){
+		//Aceptar sin cambiar de mandato
+		results.Term = nr.CurrentTerm
+		results.Success = true
+	}else{
+		//Denegar
+		results.Term = nr.CurrentTerm
+		results.Success = false
+	}
 
 	return nil
 }
@@ -357,9 +451,126 @@ func (nr *NodoRaft) AppendEntries(args *ArgAppendEntries,
 //
 func (nr *NodoRaft) enviarPeticionVoto(nodo int, args *ArgsPeticionVoto,
 											reply *RespuestaPeticionVoto) bool {
-	
 
-	// Completar....
+	nr.Logger.Println("enviando peticion de voto al nodo ",nodo)
+	client, err := rpc.Dial("tcp", (string)(nr.Nodos[nodo]))
+		if err != nil {
+			log.Fatal("dialing:", err)
+		}
 	
-	return true
+		err = client.Call("NodoRaft.PedirVoto", args, &reply)
+	if err != nil {
+		log.Fatal("Nodoraft error:", err)
+	}
+	
+	nr.Logger.Println("aaaa")
+	return reply.VoteGranted
 }
+
+
+func (nr *NodoRaft) enviarPeticionAppendEntries(nodo int, args *ArgAppendEntries,
+	reply *Results) bool {
+		
+	nr.Logger.Println("enviando enviarPeticionAppendEntries al nodo ",nodo)
+	client, err := rpc.Dial("tcp", (string)(nr.Nodos[nodo]))
+	if err != nil {
+	log.Fatal("dialing:", err)
+	}
+
+	err = client.Call("NodoRaft.AppendEntries", args, &reply)
+	if err != nil {
+	log.Fatal("Nodoraft error:", err)
+	}
+
+	return reply.Success
+}
+
+
+func (nr *NodoRaft) mandarHeartbeat(i int){
+	args := &ArgAppendEntries{}
+	reply := &Results{}
+	nr.enviarPeticionAppendEntries(i, args, reply)
+	if(reply.Success == false){
+		nr.Mux.Lock()
+		nr.CurrentTerm = reply.Term
+		nr.Estado = SEGUIDOR
+		nr.Mux.Unlock()
+	}
+}
+
+func (nr *NodoRaft) MandarVotacion(i int){
+	args := &ArgsPeticionVoto{}
+	reply := &RespuestaPeticionVoto{}
+	nr.enviarPeticionVoto(i, args, reply)
+	nr.Logger.Println("respuesta recibida:", reply)
+	if(reply.VoteGranted){
+		nr.Mux.Lock()
+		nr.Votos++
+		if(nr.Votos > len(nr.Nodos)/2){
+			nr.Estado = LIDER
+			nr.Done <- true
+		}
+		nr.Mux.Unlock()
+	}
+}
+
+func (nr *NodoRaft) GestionNodo(){
+	time.Sleep(5 * time.Second)
+	for{
+		if(nr.Estado == LIDER){
+			for nr.Estado == LIDER{
+				nr.Logger.Println("Lider")
+				time.Sleep(T_HEARTBEAT)
+				for i := 0; i < len(nr.Nodos); i++ {
+					go nr.mandarHeartbeat(i)
+				}
+			}
+			
+		}else if (nr.Estado == SEGUIDOR){
+			for nr.Estado == SEGUIDOR {
+				nr.Logger.Println("Seguidor")
+				select{
+				case <- nr.Done:
+					//Se recibe latido, reset timeout
+					nr.Logger.Println("Done recibido")
+				case <- time.After((time.Duration)(rand.Intn(T_TIMEOUT_MAX - T_TIMEOUT_MIN) + T_TIMEOUT_MIN)* time.Millisecond):
+					//Se termina el timeout, se pasa a candidato
+					nr.Mux.Lock()
+					nr.Estado = CANDIDATO
+					nr.Mux.Unlock()
+					nr.Logger.Println("Timeout seguidor")
+				
+				}
+			}
+		}else{
+			//Candidato
+			for nr.Estado == CANDIDATO{
+				nr.Logger.Println("Candidato: Empezando votacion")
+				nr.Mux.Lock()
+				nr.CurrentTerm++
+				nr.VotedFor = nr.Yo
+				nr.Votos = 1
+				nr.Mux.Unlock()
+				for i := 0; i < len(nr.Nodos); i++ {
+					if i != nr.Yo{
+						go nr.MandarVotacion(i)
+					}
+				}
+				select{
+				case <- nr.Done:
+					//Lider o seguidor
+					nr.Logger.Println("Votacion teminada antes de que acabe el tiempo")
+				case <- time.After((time.Duration)(rand.Intn(2500 - 1000) + 1000) * time.Millisecond):
+						//Se acaba el tiempo de candidato, empezar nueva votacion
+						nr.Logger.Println("Tiempo de votacion terminado")
+						break
+					
+				}
+			}
+				
+		}
+	}
+}
+
+
+
