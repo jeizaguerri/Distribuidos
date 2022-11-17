@@ -26,12 +26,12 @@ import (
 	"fmt"
 	"io/ioutil"
 	"log"
+	"math/rand"
 	"net/rpc"
 	"os"
+	"raft/internal/comun/rpctimeout"
 	"sync"
 	"time"
-
-	"raft/internal/comun/rpctimeout"
 )
 
 const (
@@ -40,7 +40,7 @@ const (
 
 	//  false deshabilita por completo los logs de depuracion
 	// Aseguraros de poner kEnableDebugLogs a false antes de la entrega
-	kEnableDebugLogs = true
+	kEnableDebugLogs = false
 
 	// Poner a true para logear a stdout en lugar de a fichero
 	kLogToStdout = false
@@ -52,7 +52,7 @@ const (
 	SEGUIDOR  = 1
 	CANDIDATO = 2
 
-	T_HEARTBEAT = 1000
+	T_HEARTBEAT = 200
 
 	T_TIMEOUT_MIN = 2000
 	T_TIMEOUT_MAX = 3000
@@ -189,10 +189,10 @@ func (nr *NodoRaft) para() {
 // El tercer valor es true si el nodo cree ser el lider
 // Cuarto valor es el lider, es el indice del líder si no es él
 func (nr *NodoRaft) obtenerEstado() (int, int, bool, int) {
-	var yo int = nr.Yo
+	var yo int
 	var mandato int
 	var esLider bool
-	var idLider int = nr.IdLider
+	var idLider int
 
 	nr.Mux.Lock()
 	yo = nr.Yo
@@ -516,7 +516,7 @@ func (nr *NodoRaft) MandarVotacion(i int) {
 }
 
 func (nr *NodoRaft) GestionNodo() {
-	time.Sleep(5 * time.Second)
+	//time.Sleep(5 * time.Second)
 	for {
 		if nr.Estado == LIDER {
 			nr.Logger.Println("Lider")
@@ -536,7 +536,7 @@ func (nr *NodoRaft) GestionNodo() {
 			case <-nr.Done:
 				//Se recibe latido, reset timeout
 				nr.Logger.Println("Heartbeat recibido y aceptado")
-			case <-time.After(T_TIMEOUT_MAX * time.Millisecond):
+			case <-time.After((time.Duration)(rand.Intn(T_TIMEOUT_MAX-T_TIMEOUT_MIN)+T_TIMEOUT_MIN) * time.Millisecond):
 				//Se termina el timeout, se pasa a candidato
 				//nr.Logger.Println("lock")
 				nr.Mux.Lock()
@@ -567,7 +567,7 @@ func (nr *NodoRaft) GestionNodo() {
 			case <-nr.Done:
 				//Lider o seguidor
 				nr.Logger.Println("Votacion teminada antes de que acabe el tiempo")
-			case <-time.After(2500 * time.Millisecond):
+			case <-time.After((time.Duration)(rand.Intn(2500-2000)+2000) * time.Millisecond):
 				//Se acaba el tiempo de candidato, empezar nueva votacion
 				nr.Logger.Println("Tiempo de votacion terminado")
 
