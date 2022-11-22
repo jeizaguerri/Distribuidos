@@ -1,0 +1,68 @@
+0.0.0.0_30002 -> 11:42:06.532592 raft.go:155: logger initialized
+0.0.0.0_30002 -> 11:42:11.402839 raft.go:307: Peticion de voto recibida de  0 con term = 1  Mi term:  0 ult votado: -1
+0.0.0.0_30002 -> 11:42:11.402860 raft.go:363: Reply al nodo:  0  =  true
+0.0.0.0_30002 -> 11:42:11.533196 raft.go:534: Seguidor
+0.0.0.0_30002 -> 11:42:11.533265 raft.go:538: Heartbeat recibido y aceptado
+0.0.0.0_30002 -> 11:42:11.533269 raft.go:534: Seguidor
+0.0.0.0_30002 -> 11:42:12.405068 raft.go:538: Heartbeat recibido y aceptado
+0.0.0.0_30002 -> 11:42:12.405107 raft.go:534: Seguidor
+0.0.0.0_30002 -> 11:42:13.406081 raft.go:538: Heartbeat recibido y aceptado
+0.0.0.0_30002 -> 11:42:13.406367 raft.go:534: Seguidor
+0.0.0.0_30002 -> 11:42:14.407364 raft.go:538: Heartbeat recibido y aceptado
+0.0.0.0_30002 -> 11:42:14.407415 raft.go:534: Seguidor
+0.0.0.0_30002 -> 11:42:15.408659 raft.go:538: Heartbeat recibido y aceptado
+0.0.0.0_30002 -> 11:42:15.409003 raft.go:534: Seguidor
+0.0.0.0_30002 -> 11:42:16.408402 raft.go:538: Heartbeat recibido y aceptado
+0.0.0.0_30002 -> 11:42:16.408582 raft.go:534: Seguidor
+0.0.0.0_30002 -> 11:42:17.415010 raft.go:538: Heartbeat recibido y aceptado
+0.0.0.0_30002 -> 11:42:17.415099 raft.go:534: Seguidor
+0.0.0.0_30002 -> 11:42:18.412840 raft.go:538: Heartbeat recibido y aceptado
+0.0.0.0_30002 -> 11:42:18.413283 raft.go:534: Seguidor
+0.0.0.0_30002 -> 11:42:19.415039 raft.go:538: Heartbeat recibido y aceptado
+0.0.0.0_30002 -> 11:42:19.415190 raft.go:534: Seguidor
+0.0.0.0_30002 -> 11:42:20.431805 raft.go:538: Heartbeat recibido y aceptado
+0.0.0.0_30002 -> 11:42:20.431944 raft.go:534: Seguidor
+0.0.0.0_30002 -> 11:42:21.435097 raft.go:538: Heartbeat recibido y aceptado
+0.0.0.0_30002 -> 11:42:21.435159 raft.go:534: Seguidor
+0.0.0.0_30002 -> 11:42:22.533554 raft.go:538: Heartbeat recibido y aceptado
+0.0.0.0_30002 -> 11:42:22.533729 raft.go:534: Seguidor
+0.0.0.0_30002 -> 11:42:23.530962 raft.go:538: Heartbeat recibido y aceptado
+0.0.0.0_30002 -> 11:42:23.530988 raft.go:534: Seguidor
+0.0.0.0_30002 -> 11:42:24.531101 raft.go:538: Heartbeat recibido y aceptado
+0.0.0.0_30002 -> 11:42:24.531650 raft.go:534: Seguidor
+0.0.0.0_30002 -> 11:42:25.536667 raft.go:538: Heartbeat recibido y aceptado
+0.0.0.0_30002 -> 11:42:25.537826 raft.go:534: Seguidor
+0.0.0.0_30002 -> 11:42:26.536911 raft.go:538: Heartbeat recibido y aceptado
+0.0.0.0_30002 -> 11:42:26.536961 raft.go:534: Seguidor
+0.0.0.0_30002 -> 11:42:27.540502 raft.go:538: Heartbeat recibido y aceptado
+0.0.0.0_30002 -> 11:42:27.541374 raft.go:534: Seguidor
+0.0.0.0_30002 -> 11:42:28.538942 raft.go:538: Heartbeat recibido y aceptado
+0.0.0.0_30002 -> 11:42:28.538997 raft.go:534: Seguidor
+0.0.0.0_30002 -> 11:42:29.541717 raft.go:538: Heartbeat recibido y aceptado
+0.0.0.0_30002 -> 11:42:29.541743 raft.go:534: Seguidor
+0.0.0.0_30002 -> 11:42:30.542337 raft.go:538: Heartbeat recibido y aceptado
+0.0.0.0_30002 -> 11:42:30.542356 raft.go:534: Seguidor
+0.0.0.0_30002 -> 11:42:31.542513 raft.go:538: Heartbeat recibido y aceptado
+0.0.0.0_30002 -> 11:42:31.542613 raft.go:534: Seguidor
+0.0.0.0_30002 -> 11:42:32.543845 raft.go:538: Heartbeat recibido y aceptado
+0.0.0.0_30002 -> 11:42:32.543943 raft.go:534: Seguidor
+0.0.0.0_30002 -> 11:42:33.544991 raft.go:538: Heartbeat recibido y aceptado
+0.0.0.0_30002 -> 11:42:33.545085 raft.go:534: Seguidor
+0.0.0.0_30002 -> 11:42:34.569075 raft.go:538: Heartbeat recibido y aceptado
+0.0.0.0_30002 -> 11:42:34.569128 raft.go:534: Seguidor
+0.0.0.0_30002 -> 11:42:35.594780 raft.go:538: Heartbeat recibido y aceptado
+0.0.0.0_30002 -> 11:42:35.594837 raft.go:534: Seguidor
+0.0.0.0_30002 -> 11:42:36.597611 raft.go:538: Heartbeat recibido y aceptado
+0.0.0.0_30002 -> 11:42:36.597628 raft.go:534: Seguidor
+0.0.0.0_30002 -> 11:42:37.871002 raft.go:538: Heartbeat recibido y aceptado
+0.0.0.0_30002 -> 11:42:37.871020 raft.go:534: Seguidor
+0.0.0.0_30002 -> 11:42:38.871276 raft.go:538: Heartbeat recibido y aceptado
+0.0.0.0_30002 -> 11:42:38.871346 raft.go:534: Seguidor
+0.0.0.0_30002 -> 11:42:39.889516 raft.go:538: Heartbeat recibido y aceptado
+0.0.0.0_30002 -> 11:42:39.891264 raft.go:534: Seguidor
+0.0.0.0_30002 -> 11:42:40.874777 raft.go:538: Heartbeat recibido y aceptado
+0.0.0.0_30002 -> 11:42:40.874989 raft.go:534: Seguidor
+0.0.0.0_30002 -> 11:42:41.873535 raft.go:538: Heartbeat recibido y aceptado
+0.0.0.0_30002 -> 11:42:41.873561 raft.go:534: Seguidor
+0.0.0.0_30002 -> 11:42:42.876284 raft.go:538: Heartbeat recibido y aceptado
+0.0.0.0_30002 -> 11:42:42.876440 raft.go:534: Seguidor

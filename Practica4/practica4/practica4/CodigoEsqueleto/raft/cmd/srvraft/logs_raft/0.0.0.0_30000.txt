@@ -1,0 +1,136 @@
+0.0.0.0_30000 -> 11:42:02.804975 raft.go:155: logger initialized
+0.0.0.0_30000 -> 11:42:07.806165 raft.go:534: Seguidor
+0.0.0.0_30000 -> 11:42:11.400657 raft.go:546: Timeout seguidor
+0.0.0.0_30000 -> 11:42:11.400875 raft.go:553: Candidato: Empezando votacion
+0.0.0.0_30000 -> 11:42:11.401454 raft.go:446: enviando peticion de voto al nodo  1
+0.0.0.0_30000 -> 11:42:11.401655 raft.go:446: enviando peticion de voto al nodo  2
+0.0.0.0_30000 -> 11:42:11.403260 raft.go:497: respuesta recibida del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:11.403274 raft.go:569: Votacion teminada antes de que acabe el tiempo
+0.0.0.0_30000 -> 11:42:11.403277 raft.go:522: Lider
+0.0.0.0_30000 -> 11:42:11.404158 raft.go:497: respuesta recibida del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:12.403781 raft.go:464: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 11:42:12.403967 raft.go:464: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 11:42:12.405369 raft.go:482: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:12.405418 raft.go:482: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:13.404330 raft.go:464: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 11:42:13.404374 raft.go:464: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 11:42:13.405734 raft.go:482: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:13.406228 raft.go:482: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:14.405453 raft.go:464: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 11:42:14.405440 raft.go:464: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 11:42:14.407536 raft.go:482: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:14.407763 raft.go:482: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:15.405725 raft.go:464: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 11:42:15.405733 raft.go:464: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 11:42:15.409114 raft.go:482: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:15.409448 raft.go:482: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:16.407282 raft.go:464: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 11:42:16.407530 raft.go:464: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 11:42:16.409041 raft.go:482: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:16.411792 raft.go:482: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:17.409921 raft.go:464: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 11:42:17.409963 raft.go:464: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 11:42:17.415385 raft.go:482: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:17.415338 raft.go:482: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:18.411139 raft.go:464: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 11:42:18.411470 raft.go:464: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 11:42:18.413540 raft.go:482: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:18.414311 raft.go:482: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:19.411771 raft.go:464: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 11:42:19.413546 raft.go:464: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 11:42:19.415440 raft.go:482: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:19.416062 raft.go:482: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:20.429674 raft.go:464: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 11:42:20.429720 raft.go:464: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 11:42:20.431805 raft.go:482: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:20.432500 raft.go:482: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:21.431698 raft.go:464: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 11:42:21.431704 raft.go:464: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 11:42:21.435506 raft.go:482: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:21.436215 raft.go:482: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:22.529699 raft.go:464: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 11:42:22.532041 raft.go:464: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 11:42:22.532691 raft.go:482: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:22.533826 raft.go:482: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:23.529914 raft.go:464: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 11:42:23.530003 raft.go:464: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 11:42:23.531217 raft.go:482: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:23.531499 raft.go:482: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:24.530149 raft.go:464: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 11:42:24.530484 raft.go:464: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 11:42:24.531861 raft.go:482: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:24.531938 raft.go:482: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:25.533554 raft.go:464: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 11:42:25.533728 raft.go:464: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 11:42:25.538161 raft.go:482: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:25.538350 raft.go:482: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:26.535488 raft.go:464: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 11:42:26.535594 raft.go:464: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 11:42:26.536733 raft.go:482: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:26.537055 raft.go:482: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:27.536267 raft.go:464: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 11:42:27.536631 raft.go:464: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 11:42:27.540178 raft.go:482: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:27.540422 raft.go:482: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:28.536666 raft.go:464: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 11:42:28.536953 raft.go:464: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 11:42:28.539086 raft.go:482: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:28.539184 raft.go:482: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:29.537467 raft.go:464: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 11:42:29.537674 raft.go:464: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 11:42:29.541589 raft.go:482: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:29.541809 raft.go:482: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:30.541087 raft.go:464: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 11:42:30.541231 raft.go:464: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 11:42:30.542804 raft.go:482: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:30.543122 raft.go:482: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:31.541269 raft.go:464: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 11:42:31.541886 raft.go:464: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 11:42:31.542739 raft.go:482: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:31.543674 raft.go:482: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:32.542285 raft.go:464: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 11:42:32.542452 raft.go:464: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 11:42:32.543355 raft.go:482: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:32.544447 raft.go:482: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:33.543668 raft.go:464: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 11:42:33.543681 raft.go:464: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 11:42:33.545545 raft.go:482: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:33.548706 raft.go:482: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:34.566334 raft.go:464: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 11:42:34.566693 raft.go:464: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 11:42:34.569327 raft.go:482: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:34.569643 raft.go:482: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:35.594183 raft.go:464: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 11:42:35.594332 raft.go:464: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 11:42:35.595171 raft.go:482: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:35.595221 raft.go:482: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:36.595552 raft.go:464: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 11:42:36.595741 raft.go:464: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 11:42:36.597813 raft.go:482: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:36.597828 raft.go:482: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:37.867471 raft.go:464: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 11:42:37.870237 raft.go:464: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 11:42:37.871342 raft.go:482: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:37.872794 raft.go:482: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:38.868578 raft.go:464: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 11:42:38.868718 raft.go:464: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 11:42:38.871065 raft.go:482: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:38.871510 raft.go:482: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:39.869695 raft.go:464: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 11:42:39.869882 raft.go:464: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 11:42:39.891639 raft.go:482: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:39.892991 raft.go:482: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:40.870457 raft.go:464: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 11:42:40.871444 raft.go:464: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 11:42:40.872999 raft.go:482: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:40.875354 raft.go:482: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:41.871361 raft.go:464: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 11:42:41.871585 raft.go:464: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 11:42:41.874640 raft.go:482: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:41.874636 raft.go:482: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:42.874302 raft.go:464: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 11:42:42.874376 raft.go:464: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 11:42:42.875799 raft.go:482: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:42.877870 raft.go:482: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 11:42:43.875674 raft.go:464: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 11:42:43.876574 raft.go:464: enviando enviarPeticionAppendEntries al nodo  1
