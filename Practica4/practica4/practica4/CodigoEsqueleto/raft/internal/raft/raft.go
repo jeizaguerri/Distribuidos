@@ -26,6 +26,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"log"
+	"math"
 	"math/rand"
 	"net/rpc"
 	"os"
@@ -224,11 +225,14 @@ func (nr *NodoRaft) someterOperacion(operacion TipoOperacion) (int, int,
 	bool, int, string) {
 	indice := -1
 	mandato := -1
-	EsLider := false
+	esLider := false
 	idLider := -1
 	valorADevolver := ""
 
 	// Vuestro codigo aqui
+	if(nr.Estado == LIDER){
+
+	}
 
 	return indice, mandato, EsLider, idLider, valorADevolver
 }
@@ -381,6 +385,36 @@ type Results struct {
 // Metodo de tratamiento de llamadas RPC AppendEntries
 func (nr *NodoRaft) AppendEntries(args *ArgAppendEntries,
 	results *Results) error {
+
+	results.Term = nr.CurrentTerm
+	//Reply false if log doesn’t contain an entry at prevLogIndex whose term matches prevLogTerm (§5.3)
+	if nr.Log[args.PrevLogIndex].Term != args.PrevLogTerm{
+		results.Success = false
+		return nil
+	}
+
+	if(args.Entries != nil){
+		// If an existing entry conflicts with a new one (same index but different terms)
+		i := 0
+		for i < args.LeaderCommit{
+			if nr.Log[args.PrevLogIndex + 1 + i].Term != args.Entries[i].Term{
+				nr.LastApplied = args.PrevLogIndex + i;
+				results.Success = false
+				return nil
+			}
+		}
+	}
+	
+	//Append any new entries not already in the log
+	nr.Entries[args.LeaderCommit] = args.Entries[args.LeaderCommit]
+
+	// If leaderCommit > commitIndex, set commitIndex = min(leaderCommit, index of last new entry)
+	if args.LeaderCommit > nr.CommitIndex{
+		commitIndex = math.Min(args.LeaderCommit, nr.LastApplied)
+	}
+
+	
+	//1. Reply false if term < currentTerm (§5.1)
 	if args.Term > nr.CurrentTerm {
 		//Aceptar, cambiar de mandato y reset de voted for
 		//nr.Logger.Println("lock")
@@ -476,7 +510,7 @@ func (nr *NodoRaft) enviarPeticionAppendEntries(nodo int, args *ArgAppendEntries
 }
 
 func (nr *NodoRaft) mandarHeartbeat(i int) {
-	args := &ArgAppendEntries{nr.CurrentTerm, nr.Yo, 0, 0, nil, 0}
+	args := &ArgAppendEntries{nr.CurrentTerm, nr.Yo, nr.NextIndex[i]-1, nr.Log[nr.NextIndex[i]-1].Term, nil, nr.CommitIndex} //cambiar arg del append entries (el nil está bien)
 	reply := &Results{}
 	nr.enviarPeticionAppendEntries(i, args, reply)
 	nr.Logger.Println("respuesta heartbeat del nodo: ", i, " = ", reply, " miTerm = ", nr.CurrentTerm)
