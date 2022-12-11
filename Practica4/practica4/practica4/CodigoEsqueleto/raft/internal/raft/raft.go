@@ -396,7 +396,7 @@ func (nr *NodoRaft) AppendEntries(args *ArgAppendEntries,
 	if(args.Entries != nil){
 		// If an existing entry conflicts with a new one (same index but different terms)
 		i := 0
-		for i < args.LeaderCommit{
+		for i < args.LeaderCommit{ // corregir len of entries
 			if nr.Log[args.PrevLogIndex + 1 + i].Term != args.Entries[i].Term{
 				nr.LastApplied = args.PrevLogIndex + i;
 				results.Success = false
@@ -406,7 +406,7 @@ func (nr *NodoRaft) AppendEntries(args *ArgAppendEntries,
 	}
 	
 	//Append any new entries not already in the log
-	nr.Entries[args.LeaderCommit] = args.Entries[args.LeaderCommit]
+	nr.Log[args.LeaderCommit] = args.Entries[args.LeaderCommit]
 
 	// If leaderCommit > commitIndex, set commitIndex = min(leaderCommit, index of last new entry)
 	if args.LeaderCommit > nr.CommitIndex{
