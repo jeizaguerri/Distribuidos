@@ -307,63 +307,40 @@ type RespuestaPeticionVoto struct {
 // Metodo para RPC PedirVoto
 func (nr *NodoRaft) PedirVoto(peticion *ArgsPeticionVoto,
 	reply *RespuestaPeticionVoto) error {
-	// Vuestro codigo aqui
+	
 	nr.Logger.Println("Peticion de voto recibida de ", peticion.CandidateID, "con term =", peticion.Term, " Mi term: ", nr.CurrentTerm, "ult votado:", nr.VotedFor)
+	
+	if peticion.Term > nr.CurrentTerm {
+		//Actualizar currentTerm
+		nr.Mux.Lock()
+		nr.CurrentTerm = peticion.Term
+		nr.Mux.Unlock()
+	}
+
 	if peticion.Term < nr.CurrentTerm {
 		//denegar
-		//nr.Logger.Println("a")
 		reply.Term = nr.CurrentTerm
 		reply.VoteGranted = false
-		//nr.Logger.Println("asal")
-
-	} else if peticion.Term > nr.CurrentTerm {
-		//aceptar
-		//nr.Logger.Println("b")
-		//nr.Logger.Println("lock")
-		nr.Mux.Lock()
-		//nr.Logger.Println("bdespues lock")
-		nr.Estado = SEGUIDOR
-		nr.CurrentTerm = peticion.Term
-		nr.VotedFor = peticion.CandidateID
-		nr.IdLider = peticion.CandidateID
-		//nr.Logger.Println("bantes done")
-
-		//nr.Logger.Println("bdespues dones")
-		nr.Mux.Unlock()
-		//nr.Logger.Println("Unlock")
-		nr.Done <- true
-
-		reply.Term = nr.CurrentTerm
-		reply.VoteGranted = true
-
-	} else if nr.VotedFor != peticion.CandidateID && nr.VotedFor != -1 {
-		//denegar
-		//nr.Logger.Println("c")
-		reply.Term = nr.CurrentTerm
-		reply.VoteGranted = false
-		//nr.Logger.Println("csal")
-
-	} else {
-		//aceptar
-		//nr.Logger.Println("d")
-		//nr.Logger.Println("lock")
-		nr.Mux.Lock()
-		//nr.Logger.Println("d1")
-		nr.IdLider = peticion.CandidateID
-		nr.Estado = SEGUIDOR
-		nr.VotedFor = peticion.CandidateID
-		//nr.Logger.Println("d3")
-
-		//nr.Logger.Println("d4")
-		nr.Mux.Unlock()
-		//nr.Logger.Println("Unlock")
-		nr.Done <- true
-
-		//nr.Logger.Println("d5")
-		reply.Term = nr.CurrentTerm
-		reply.VoteGranted = true
-		//nr.Logger.Println("dsal")
+		return nil
 	}
+	
+	if (nr.VotedFor != peticion.CandidateID && nr.VotedFor != -1) || (nr.LastApplied > peticion.LastLogIndex) {
+		//denegar
+		reply.VoteGranted = false
+		return nil
+	}
+
+	//aceptar
+	nr.Mux.Lock()
+	nr.IdLider = peticion.CandidateID
+	nr.Estado = SEGUIDOR
+	nr.VotedFor = peticion.CandidateID
+
+	nr.Mux.Unlock()
+	nr.Done <- true
+	reply.Term = nr.CurrentTerm
+	reply.VoteGranted = true
+
 	nr.Logger.Println("Reply al nodo: ", peticion.CandidateID, " = ", reply.VoteGranted)
 	return nil
 }
@@ -393,25 +370,52 @@ func (nr *NodoRaft) AppendEntries(args *ArgAppendEntries,
 		return nil
 	}
 
+	//igual en Pedir Voto si el lider tiene un commit index menor le respondemos false pero nos actualizamos el term si es mayor
+	if nr.CommitIndex > args.LeaderCommit{
+		if args.Term > nr.CurrentTerm{
+			nr.CurrentTerm = args.Term
+		}
+		results.Success = false
+		return nil
+	}
+
 	if(args.Entries != nil){
 		// If an existing entry conflicts with a new one (same index but different terms)
 		i := 0
-		for i < args.LeaderCommit{ // corregir len of entries
-			if nr.Log[args.PrevLogIndex + 1 + i].Term != args.Entries[i].Term{
-				nr.LastApplied = args.PrevLogIndex + i;
-				results.Success = false
-				return nil
-			}
+		if args.PrevLogIndex  < nr.LastApplied {
+			for i < (nr.LastApplied - args.PrevLogIndex) && i < len(args.Entries){ // corregir len of entries
+								
+					if nr.Log[args.PrevLogIndex + 1 + i].Term != args.Entries[i].Term{
+						nr.LastApplied = args.PrevLogIndex + i;
+						results.Success = false
+						return nil
+					}
+					i++
+				}
+			
+		} else if args.PrevLogIndex > nr.LastApplied{
+			results.Success = false
+			return nil
 		}
 	}
-	
+
 	//Append any new entries not already in the log
-	nr.Log[args.LeaderCommit] = args.Entries[args.LeaderCommit]
+	if(args.Entries != nil){
+		i := 0
+		for i < len(args.Entries){ // corregir len of entries
+			nr.Log[args.PrevLogIndex + 1 + i] = args.Entries[i]
+			nr.LastApplied++
+			i++
+		}
+	}
+
 
 	// If leaderCommit > commitIndex, set commitIndex = min(leaderCommit, index of last new entry)
 	if args.LeaderCommit > nr.CommitIndex{
-		commitIndex = math.Min(args.LeaderCommit, nr.LastApplied)
+		nr.CommitIndex =(int) (math.Min((float64)(args.LeaderCommit), (float64)(nr.LastApplied)))
 	}
+
+
 
 	
 	//1. Reply false if term < currentTerm (§5.1)
@@ -525,7 +529,7 @@ func (nr *NodoRaft) mandarHeartbeat(i int) {
 }
 
 func (nr *NodoRaft) MandarVotacion(i int) {
-	args := &ArgsPeticionVoto{nr.CurrentTerm, nr.Yo, 0, 0}
+	args := &ArgsPeticionVoto{nr.CurrentTerm, nr.Yo, nr.LastApplied, nr.Log[nr.LastApplied].Term}
 	reply := &RespuestaPeticionVoto{}
 	nr.enviarPeticionVoto(i, args, reply)
 	nr.Logger.Println("respuesta recibida del nodo: ", i, " = ", reply, " miTerm = ", nr.CurrentTerm)
