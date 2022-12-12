@@ -158,7 +158,7 @@ func (cfg *configDespliegue) stop() {
 
 // Se pone en marcha una replica ?? - 3 NODOS RAFT
 func (cfg *configDespliegue) soloArranqueYparadaTest1(t *testing.T) {
-	t.Skip("SKIPPED soloArranqueYparadaTest1")
+	//t.Skip("SKIPPED soloArranqueYparadaTest1")
 
 	fmt.Println(t.Name(), ".....................")
 
@@ -203,7 +203,7 @@ func (cfg *configDespliegue) elegirPrimerLiderTest2(t *testing.T) {
 
 // Fallo de un primer lider y reeleccion de uno nuevo - 3 NODOS RAFT
 func (cfg *configDespliegue) falloAnteriorElegirNuevoLiderTest3(t *testing.T) {
-	//t.Skip("SKIPPED FalloAnteriorElegirNuevoLiderTest3")
+	t.Skip("SKIPPED FalloAnteriorElegirNuevoLiderTest3")
 
 	fmt.Println(t.Name(), ".....................")
 
@@ -218,7 +218,7 @@ func (cfg *configDespliegue) falloAnteriorElegirNuevoLiderTest3(t *testing.T) {
 
 	// Comprobar estado replica 2
 	cfg.comprobarEstadoRemoto(2, 0, false, -1)
- 
+
 	// Parar réplicas almacenamiento en remoto
 
 	fmt.Printf("Lider inicial\n")
