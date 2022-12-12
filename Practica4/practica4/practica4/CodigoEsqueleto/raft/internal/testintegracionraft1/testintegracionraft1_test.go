@@ -218,7 +218,7 @@ func (cfg *configDespliegue) falloAnteriorElegirNuevoLiderTest3(t *testing.T) {
 
 	// Comprobar estado replica 2
 	cfg.comprobarEstadoRemoto(2, 0, false, -1)
-
+ 
 	// Parar réplicas almacenamiento en remoto
 
 	fmt.Printf("Lider inicial\n")
