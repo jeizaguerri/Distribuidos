@@ -407,7 +407,7 @@ func (nr *NodoRaft) AppendEntries(args *ArgAppendEntries,
 
 	results.Term = nr.CurrentTerm
 	//Reply false if log doesn’t contain an entry at prevLogIndex whose term matches prevLogTerm (§5.3)
-	if nr.Log[args.PrevLogIndex].Term != args.PrevLogTerm {
+	if len(nr.Log) > 0 && nr.Log[args.PrevLogIndex].Term != args.PrevLogTerm {
 		results.Success = false
 		return nil
 	}
@@ -563,8 +563,27 @@ func (nr *NodoRaft) enviarPeticionAppendEntries(nodo int, args *ArgAppendEntries
 	return reply.Success
 }
 
+//El valor devuelto indica si ha habido error (timeout) o no
+func (nr *NodoRaft) enviarPeticionAppendEntriesTimeout(nodo int, args *ArgAppendEntries,
+	reply *Results, timeout int) bool {
+
+	nr.Logger.Println("enviando enviarPeticionAppendEntries al nodo ", nodo)
+	err := nr.Nodos[nodo].CallTimeout("NodoRaft.AppendEntries", args, &reply, (time.Duration)(timeout) * time.Millisecond)
+	if err != nil {
+		return false
+	}
+
+	return true
+}
+
 func (nr *NodoRaft) mandarHeartbeat(i int) {
-	args := &ArgAppendEntries{nr.CurrentTerm, nr.Yo, nr.NextIndex[i] - 1, nr.Log[nr.NextIndex[i]-1].Term, nil, nr.CommitIndex} //cambiar arg del append entries (el nil está bien)
+	args := &ArgAppendEntries{}
+	if(len(nr.Log)> 0){
+		args = &ArgAppendEntries{nr.CurrentTerm, nr.Yo, nr.NextIndex[i] - 1, nr.Log[nr.NextIndex[i]-1].Term, nil, nr.CommitIndex} //cambiar arg del append entries (el nil está bien)
+	}else{
+		args = &ArgAppendEntries{nr.CurrentTerm, nr.Yo, nr.NextIndex[i] - 1, 0, nil, nr.CommitIndex} //cambiar arg del append entries (el nil está bien)
+	}
+
 	reply := &Results{}
 	nr.enviarPeticionAppendEntries(i, args, reply)
 	nr.Logger.Println("respuesta heartbeat del nodo: ", i, " = ", reply, " miTerm = ", nr.CurrentTerm)
@@ -588,9 +607,10 @@ func (nr *NodoRaft) mandarHeartbeat(i int) {
 			entries := []EntradaLog{nr.Log[nr.NextIndex[i]]}
 
 			argsReconstruir := &ArgAppendEntries{nr.CurrentTerm, nr.Yo, nr.NextIndex[i] - 1, nr.Log[nr.NextIndex[i]-1].Term, entries, nr.NextIndex[i]}
-			nr.enviarPeticionAppendEntries(i, argsReconstruir, reply)
-			err := nr.Nodos[i].CallTimeout("enviarPeticionAppendEntries", argsReconstruir, reply, T_HEARTBEAT*time.Millisecond)
-			if err == nil && reply.Success == true {
+			//nr.enviarPeticionAppendEntries(i, argsReconstruir, reply)
+			err := nr.enviarPeticionAppendEntriesTimeout(i, argsReconstruir, reply, T_HEARTBEAT)
+			//err := nr.Nodos[i].CallTimeout("enviarPeticionAppendEntries", argsReconstruir, reply, T_HEARTBEAT*time.Millisecond)
+			if !err && reply.Success == true {
 				nr.Mux.Lock()
 				nr.NextIndex[i]++
 				nr.Mux.Unlock()
