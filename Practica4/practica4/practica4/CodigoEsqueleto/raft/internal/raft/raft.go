@@ -240,7 +240,14 @@ func (nr *NodoRaft) obtenerEstado() (int, int, bool, int) {
 
 // lo que lanzamos como go routines en el lider para someter una entrada
 func (nr *NodoRaft) mandarSometer(i int, entries []EntradaLog) {
-	args := &ArgAppendEntries{nr.CurrentTerm, nr.Yo, nr.NextIndex[i] - 1, nr.Log[nr.NextIndex[i]-1].Term, entries, nr.CommitIndex}
+	args := &ArgAppendEntries{}
+	if len(nr.Log) == 1 {
+		args = &ArgAppendEntries{nr.CurrentTerm, nr.Yo, 0, 0, entries, nr.CommitIndex} //cambiar arg del append entries (el nil está bien)
+	} else {
+		args = &ArgAppendEntries{nr.CurrentTerm, nr.Yo, nr.NextIndex[i] - 1, nr.Log[nr.NextIndex[i]-1].Term, entries, nr.CommitIndex} //cambiar arg del append entries (el nil está bien)
+	}
+
+	//args := &ArgAppendEntries{nr.CurrentTerm, nr.Yo, nr.NextIndex[i] - 1, nr.Log[nr.NextIndex[i]-1].Term, entries, nr.CommitIndex}
 	reply := &Results{}
 	nr.enviarPeticionAppendEntries(i, args, reply)
 	nr.Logger.Println("respuesta someterOperacion del nodo: ", i, " = ", reply, " miTerm = ", nr.CurrentTerm)
@@ -279,6 +286,7 @@ func (nr *NodoRaft) someterOperacion(operacion TipoOperacion) (int, int,
 	nr.Mux.Lock()
 	nr.Log = insert(nr.Log, indice, EntradaLog{nr.Estado, mandato, operacion}) //añadimos al log del lider e incrementamos el last aplied
 	nr.LastApplied++
+	nr.Logger.Printf("contenido del Log: ", nr.Log)
 	nr.Mux.Unlock()
 
 	entries := []EntradaLog{EntradaLog{nr.Estado, mandato, operacion}}
@@ -492,6 +500,8 @@ func (nr *NodoRaft) AppendEntries(args *ArgAppendEntries,
 			nr.Mux.Unlock()
 			i++
 		}
+		nr.Logger.Printf("contenido del Log: ", nr.Log)
+		nr.Logger.Printf("args:  tamaño len", len(args.Entries), " Entries:", args.Entries, " PrevLogIndex", args.PrevLogIndex)
 	}
 
 	// If leaderCommit > commitIndex, set commitIndex = min(leaderCommit, index of last new entry)
@@ -618,7 +628,7 @@ func (nr *NodoRaft) mandarHeartbeat(i int) {
 	if len(nr.Log) > 0 {
 		args = &ArgAppendEntries{nr.CurrentTerm, nr.Yo, nr.NextIndex[i] - 1, nr.Log[nr.NextIndex[i]-1].Term, nil, nr.CommitIndex} //cambiar arg del append entries (el nil está bien)
 	} else {
-		args = &ArgAppendEntries{nr.CurrentTerm, nr.Yo, nr.NextIndex[i] - 1, 0, nil, nr.CommitIndex} //cambiar arg del append entries (el nil está bien)
+		args = &ArgAppendEntries{nr.CurrentTerm, nr.Yo, 0, 0, nil, nr.CommitIndex} //cambiar arg del append entries (el nil está bien)
 	}
 
 	reply := &Results{}
@@ -673,12 +683,13 @@ func (nr *NodoRaft) MandarVotacion(i int) {
 	nr.enviarPeticionVoto(i, args, reply)
 	nr.Logger.Println("respuesta recibida del nodo: ", i, " = ", reply, " miTerm = ", nr.CurrentTerm)
 	if reply.VoteGranted {
-		//nr.Logger.Println("lock")
+
 		nr.Mux.Lock()
 		nr.Votos++
 		nr.Mux.Unlock()
+		nr.Logger.Println("votos++")
 		///nr.Logger.Println("Unlock")
-		if nr.Estado == LIDER && nr.Votos > len(nr.Nodos)/2 {
+		if nr.Votos > len(nr.Nodos)/2 { //nr.Estado == LIDER esto lo puse pero no se por que, si hay problemas es algo a mirar
 			//nr.Logger.Println("lock")
 			nr.Mux.Lock()
 			nr.IdLider = nr.Yo
@@ -712,10 +723,19 @@ func (nr *NodoRaft) GestionNodo() {
 
 		if nr.Estado == LIDER {
 			nr.Logger.Println("Lider")
+			var escribir TipoOperacion = TipoOperacion{"escribir", "1", "a"}
+
+			nr.someterOperacion(escribir)
 
 			//poner todos los next index iguales al commit mio
-			for index, _ := range nr.NextIndex {
-				nr.NextIndex[index] = nr.CommitIndex + 1
+			if nr.CommitIndex != 0 {
+				for index, _ := range nr.NextIndex {
+					nr.NextIndex[index] = nr.CommitIndex + 1
+				}
+			} else {
+				for index, _ := range nr.NextIndex {
+					nr.NextIndex[index] = 0
+				}
 			}
 
 			for nr.Estado == LIDER {

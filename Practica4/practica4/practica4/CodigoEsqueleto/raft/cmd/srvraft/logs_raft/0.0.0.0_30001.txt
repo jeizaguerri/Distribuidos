@@ -1,73 +1,24 @@
-0.0.0.0_30001 -> 11:42:04.775085 raft.go:155: logger initialized
-0.0.0.0_30001 -> 11:42:09.778749 raft.go:534: Seguidor
-0.0.0.0_30001 -> 11:42:11.403380 raft.go:307: Peticion de voto recibida de  0 con term = 1  Mi term:  0 ult votado: -1
-0.0.0.0_30001 -> 11:42:11.403646 raft.go:363: Reply al nodo:  0  =  true
-0.0.0.0_30001 -> 11:42:11.403894 raft.go:538: Heartbeat recibido y aceptado
-0.0.0.0_30001 -> 11:42:11.403904 raft.go:534: Seguidor
-0.0.0.0_30001 -> 11:42:12.405241 raft.go:538: Heartbeat recibido y aceptado
-0.0.0.0_30001 -> 11:42:12.405259 raft.go:534: Seguidor
-0.0.0.0_30001 -> 11:42:13.405541 raft.go:538: Heartbeat recibido y aceptado
-0.0.0.0_30001 -> 11:42:13.406298 raft.go:534: Seguidor
-0.0.0.0_30001 -> 11:42:14.407396 raft.go:538: Heartbeat recibido y aceptado
-0.0.0.0_30001 -> 11:42:14.407553 raft.go:534: Seguidor
-0.0.0.0_30001 -> 11:42:15.408621 raft.go:538: Heartbeat recibido y aceptado
-0.0.0.0_30001 -> 11:42:15.408655 raft.go:534: Seguidor
-0.0.0.0_30001 -> 11:42:16.411160 raft.go:538: Heartbeat recibido y aceptado
-0.0.0.0_30001 -> 11:42:16.411216 raft.go:534: Seguidor
-0.0.0.0_30001 -> 11:42:17.414710 raft.go:538: Heartbeat recibido y aceptado
-0.0.0.0_30001 -> 11:42:17.414950 raft.go:534: Seguidor
-0.0.0.0_30001 -> 11:42:18.413419 raft.go:538: Heartbeat recibido y aceptado
-0.0.0.0_30001 -> 11:42:18.413432 raft.go:534: Seguidor
-0.0.0.0_30001 -> 11:42:19.415896 raft.go:538: Heartbeat recibido y aceptado
-0.0.0.0_30001 -> 11:42:19.415951 raft.go:534: Seguidor
-0.0.0.0_30001 -> 11:42:20.432124 raft.go:538: Heartbeat recibido y aceptado
-0.0.0.0_30001 -> 11:42:20.432258 raft.go:534: Seguidor
-0.0.0.0_30001 -> 11:42:21.435830 raft.go:538: Heartbeat recibido y aceptado
-0.0.0.0_30001 -> 11:42:21.435849 raft.go:534: Seguidor
-0.0.0.0_30001 -> 11:42:22.532507 raft.go:538: Heartbeat recibido y aceptado
-0.0.0.0_30001 -> 11:42:22.532523 raft.go:534: Seguidor
-0.0.0.0_30001 -> 11:42:23.531095 raft.go:538: Heartbeat recibido y aceptado
-0.0.0.0_30001 -> 11:42:23.531113 raft.go:534: Seguidor
-0.0.0.0_30001 -> 11:42:24.531275 raft.go:538: Heartbeat recibido y aceptado
-0.0.0.0_30001 -> 11:42:24.531868 raft.go:534: Seguidor
-0.0.0.0_30001 -> 11:42:25.537256 raft.go:538: Heartbeat recibido y aceptado
-0.0.0.0_30001 -> 11:42:25.538361 raft.go:534: Seguidor
-0.0.0.0_30001 -> 11:42:26.536374 raft.go:538: Heartbeat recibido y aceptado
-0.0.0.0_30001 -> 11:42:26.536548 raft.go:534: Seguidor
-0.0.0.0_30001 -> 11:42:27.540402 raft.go:538: Heartbeat recibido y aceptado
-0.0.0.0_30001 -> 11:42:27.541971 raft.go:534: Seguidor
-0.0.0.0_30001 -> 11:42:28.538573 raft.go:538: Heartbeat recibido y aceptado
-0.0.0.0_30001 -> 11:42:28.538678 raft.go:534: Seguidor
-0.0.0.0_30001 -> 11:42:29.541458 raft.go:538: Heartbeat recibido y aceptado
-0.0.0.0_30001 -> 11:42:29.541827 raft.go:534: Seguidor
-0.0.0.0_30001 -> 11:42:30.542314 raft.go:538: Heartbeat recibido y aceptado
-0.0.0.0_30001 -> 11:42:30.542831 raft.go:534: Seguidor
-0.0.0.0_30001 -> 11:42:31.543236 raft.go:538: Heartbeat recibido y aceptado
-0.0.0.0_30001 -> 11:42:31.543477 raft.go:534: Seguidor
-0.0.0.0_30001 -> 11:42:32.543209 raft.go:538: Heartbeat recibido y aceptado
-0.0.0.0_30001 -> 11:42:32.543244 raft.go:534: Seguidor
-0.0.0.0_30001 -> 11:42:33.548529 raft.go:538: Heartbeat recibido y aceptado
-0.0.0.0_30001 -> 11:42:33.549133 raft.go:534: Seguidor
-0.0.0.0_30001 -> 11:42:34.569212 raft.go:538: Heartbeat recibido y aceptado
-0.0.0.0_30001 -> 11:42:34.569305 raft.go:534: Seguidor
-0.0.0.0_30001 -> 11:42:35.594921 raft.go:538: Heartbeat recibido y aceptado
-0.0.0.0_30001 -> 11:42:35.595029 raft.go:534: Seguidor
-0.0.0.0_30001 -> 11:42:36.597246 raft.go:538: Heartbeat recibido y aceptado
-0.0.0.0_30001 -> 11:42:36.597695 raft.go:534: Seguidor
-0.0.0.0_30001 -> 11:42:37.872251 raft.go:538: Heartbeat recibido y aceptado
-0.0.0.0_30001 -> 11:42:37.872872 raft.go:534: Seguidor
-0.0.0.0_30001 -> 11:42:38.870821 raft.go:538: Heartbeat recibido y aceptado
-0.0.0.0_30001 -> 11:42:38.870842 raft.go:534: Seguidor
-0.0.0.0_30001 -> 11:42:39.892122 raft.go:538: Heartbeat recibido y aceptado
-0.0.0.0_30001 -> 11:42:39.892182 raft.go:534: Seguidor
-0.0.0.0_30001 -> 11:42:40.872641 raft.go:538: Heartbeat recibido y aceptado
-0.0.0.0_30001 -> 11:42:40.872898 raft.go:534: Seguidor
-0.0.0.0_30001 -> 11:42:41.874247 raft.go:538: Heartbeat recibido y aceptado
-0.0.0.0_30001 -> 11:42:41.874301 raft.go:534: Seguidor
-0.0.0.0_30001 -> 11:42:42.875636 raft.go:538: Heartbeat recibido y aceptado
-0.0.0.0_30001 -> 11:42:42.875805 raft.go:534: Seguidor
-0.0.0.0_30001 -> 11:42:43.877613 raft.go:538: Heartbeat recibido y aceptado
-0.0.0.0_30001 -> 11:42:43.877732 raft.go:534: Seguidor
-0.0.0.0_30001 -> 11:42:46.880836 raft.go:546: Timeout seguidor
-0.0.0.0_30001 -> 11:42:46.880893 raft.go:553: Candidato: Empezando votacion
-0.0.0.0_30001 -> 11:42:46.880904 raft.go:446: enviando peticion de voto al nodo  2
+0.0.0.0_30001 -> 20:55:45.387403 raft.go:180: logger initialized
+0.0.0.0_30001 -> 20:55:50.391652 raft.go:767: Seguidor
+0.0.0.0_30001 -> 20:55:50.998753 raft.go:372: Peticion de voto recibida de  0 con term = 1  Mi term:  0 ult votado: -1
+0.0.0.0_30001 -> 20:55:50.998827 raft.go:420: antes del done aceptar
+0.0.0.0_30001 -> 20:55:50.998837 raft.go:422: despues del done aceptar
+0.0.0.0_30001 -> 20:55:50.998841 raft.go:426: Reply al nodo:  0  =  true
+0.0.0.0_30001 -> 20:55:51.000849 raft.go:503: contenido del Log: %!(EXTRA []raft.EntradaLog=[{0 1 {escribir 1 a}} {0 1 {escribir 1 a}} {0 1 {escribir 1 a}}])
+0.0.0.0_30001 -> 20:55:51.000870 raft.go:504: args:  tamaño len%!(EXTRA int=1, string= Entries:, []raft.EntradaLog=[{0 1 {escribir 1 a}}], string= PrevLogIndex, int=0)
+0.0.0.0_30001 -> 20:55:51.000875 raft.go:534: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:55:51.000879 raft.go:536: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:55:51.000915 raft.go:771: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:55:51.000920 raft.go:767: Seguidor
+0.0.0.0_30001 -> 20:55:53.888892 raft.go:779: Timeout seguidor
+0.0.0.0_30001 -> 20:55:53.889007 raft.go:786: Candidato: Empezando votacion
+0.0.0.0_30001 -> 20:55:53.889035 raft.go:803: Votacion teminada antes de que acabe el tiempo
+0.0.0.0_30001 -> 20:55:53.889039 raft.go:786: Candidato: Empezando votacion
+0.0.0.0_30001 -> 20:55:53.889056 raft.go:675: Longitud del log > 0
+0.0.0.0_30001 -> 20:55:53.889073 raft.go:581: enviando peticion de voto al nodo  2
+0.0.0.0_30001 -> 20:55:53.889273 raft.go:675: Longitud del log > 0
+0.0.0.0_30001 -> 20:55:53.889291 raft.go:581: enviando peticion de voto al nodo  0
+0.0.0.0_30001 -> 20:55:53.889346 raft.go:675: Longitud del log > 0
+0.0.0.0_30001 -> 20:55:53.889411 raft.go:581: enviando peticion de voto al nodo  2
+0.0.0.0_30001 -> 20:55:53.889513 raft.go:675: Longitud del log > 0
+0.0.0.0_30001 -> 20:55:53.889538 raft.go:581: enviando peticion de voto al nodo  0
