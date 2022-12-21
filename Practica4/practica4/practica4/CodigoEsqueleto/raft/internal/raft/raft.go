@@ -41,7 +41,7 @@ const (
 
 	//  false deshabilita por completo los logs de depuracion
 	// Aseguraros de poner kEnableDebugLogs a false antes de la entrega
-	kEnableDebugLogs = false
+	kEnableDebugLogs = true
 
 	// Poner a true para logear a stdout en lugar de a fichero
 	kLogToStdout = false
@@ -92,6 +92,8 @@ type NodoRaft struct {
 	// Utilización opcional de este logger para depuración
 	// Cada nodo Raft tiene su propio registro de trazas (logs)
 	Logger *log.Logger
+
+	m map[string]string
 
 	// Vuestros datos aqui.
 	Log []EntradaLog
@@ -199,10 +201,12 @@ func NuevoNodo(nodos []rpctimeout.HostPort, yo int,
 	}
 
 	nr.Estado = SEGUIDOR
+	nr.m = make(map[string]string)
 	nr.Done = make(chan bool, 1)
 	nr.heartBeat = make(chan bool, 1)
 	nr.CanalOperacion = canalAplicarOperacion
 
+	go nr.sistemaClaveValor()
 	go nr.GestionNodo()
 	return nr
 }
@@ -536,6 +540,11 @@ func (nr *NodoRaft) AppendEntries(args *ArgAppendEntries,
 	if args.LeaderCommit > nr.CommitIndex {
 		nr.Mux.Lock()
 		nr.CommitIndex = (int)(math.Min((float64)(args.LeaderCommit), (float64)(nr.LastApplied)))
+
+		aplic := AplicaOperacion{nr.CommitIndex - 1, nr.Log[nr.CommitIndex-1].Operacion}
+		nr.CanalOperacion <- aplic
+
+		nr.Logger.Printf("COMMIT INDEX: ", nr.CommitIndex)
 		nr.Mux.Unlock()
 	}
 	if args.Entries != nil {
@@ -745,6 +754,31 @@ func (nr *NodoRaft) MandarVotacion(i int) {
 	}
 }
 
+func (nr *NodoRaft) OperacionEscribir(clave string, valor string) {
+	nr.Mux.Lock()
+	nr.Logger.Println("Operacion escribir: clave=", clave, " valor=", valor)
+	nr.m[clave] = valor
+	nr.Mux.Unlock()
+}
+
+func (nr *NodoRaft) OperacionLeer(clave string) string {
+	nr.Mux.Lock()
+	nr.Logger.Println("Operacion leer: clave=", clave, " valor=", nr.m[clave])
+	nr.Mux.Unlock()
+	return nr.m[clave]
+}
+
+func (nr *NodoRaft) sistemaClaveValor() {
+	for {
+		op := <-nr.CanalOperacion
+		if op.Operacion.Operacion == "leer" {
+			nr.OperacionLeer(op.Operacion.Clave)
+		} else if op.Operacion.Operacion == "escribir" {
+			nr.OperacionEscribir(op.Operacion.Clave, op.Operacion.Valor)
+		}
+	}
+}
+
 func (nr *NodoRaft) GestionNodo() {
 	time.Sleep(5 * time.Second)
 	for {
@@ -757,8 +791,8 @@ func (nr *NodoRaft) GestionNodo() {
 		if nr.Estado == LIDER {
 			nr.Logger.Println("Lider")
 			var escribir TipoOperacion = TipoOperacion{"escribir", "1", "a"}
-			var leer TipoOperacion = TipoOperacion{"leer", "2", "b"}
-			var lala TipoOperacion = TipoOperacion{"lala", "3", "c"}
+			var leer TipoOperacion = TipoOperacion{"escribir", "2", "b"}
+			var lala TipoOperacion = TipoOperacion{"leer", "1", ""}
 			nr.someterOperacion(escribir)
 
 			go func(msg string) {
@@ -787,14 +821,17 @@ func (nr *NodoRaft) GestionNodo() {
 
 				//Commit de las entradas del registro
 				nAvanzados := 0
-				for index, elem := range nr.MatchIndex {
+				for index, _ := range nr.MatchIndex {
 					nr.MatchIndex[index] = nr.NextIndex[index] - 1
-					if elem > nr.CommitIndex {
+					if nr.MatchIndex[index] >= nr.CommitIndex {
 						nAvanzados++
 					}
 				}
 				if nAvanzados > len(nr.Nodos)/2 {
-					nr.CommitIndex++
+					nr.CommitIndex++ //hacemos commit en el lider
+					aplic := AplicaOperacion{nr.CommitIndex - 1, nr.Log[nr.CommitIndex-1].Operacion}
+					nr.CanalOperacion <- aplic
+
 				}
 				nr.Logger.Println("Commit index = ", nr.CommitIndex)
 
