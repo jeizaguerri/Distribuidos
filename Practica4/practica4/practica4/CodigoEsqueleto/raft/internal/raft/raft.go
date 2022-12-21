@@ -41,7 +41,7 @@ const (
 
 	//  false deshabilita por completo los logs de depuracion
 	// Aseguraros de poner kEnableDebugLogs a false antes de la entrega
-	kEnableDebugLogs = true
+	kEnableDebugLogs = false
 
 	// Poner a true para logear a stdout en lugar de a fichero
 	kLogToStdout = false
@@ -123,7 +123,7 @@ func insert(a []EntradaLog, index int, value EntradaLog) []EntradaLog {
 	}
 
 	if len(a) < index {
-		for i := len(a); i <= len(a)+(index-len(a)); i++ {
+		for i := len(a); i < len(a)+(index-len(a)); i++ {
 			a = append(a, value) //hacemos vario inserts hasta llegar al índice que queremos
 		}
 		return append(a, value)
@@ -240,16 +240,25 @@ func (nr *NodoRaft) obtenerEstado() (int, int, bool, int) {
 
 // lo que lanzamos como go routines en el lider para someter una entrada
 func (nr *NodoRaft) mandarSometer(i int, entries []EntradaLog) {
+
 	args := &ArgAppendEntries{}
-	if len(nr.Log) == 1 {
-		args = &ArgAppendEntries{nr.CurrentTerm, nr.Yo, 0, 0, entries, nr.CommitIndex} //cambiar arg del append entries (el nil está bien)
-	} else {
+	if len(nr.Log) > 1 && nr.NextIndex[i] > 0 {
 		args = &ArgAppendEntries{nr.CurrentTerm, nr.Yo, nr.NextIndex[i] - 1, nr.Log[nr.NextIndex[i]-1].Term, entries, nr.CommitIndex} //cambiar arg del append entries (el nil está bien)
+	} else {
+		args = &ArgAppendEntries{nr.CurrentTerm, nr.Yo, 0, 0, entries, nr.CommitIndex} //cambiar arg del append entries (el nil está bien)
 	}
+	nr.Logger.Println("Args del someter al nodo ", i, ": ", args)
+	//args := &ArgAppendEntries{}
+	//if len(nr.Log) == 1 {
+	//	args = &ArgAppendEntries{nr.CurrentTerm, nr.Yo, 0, 0, entries, nr.CommitIndex} //cambiar arg del append entries (el nil está bien)
+	//} else {
+	//	args = &ArgAppendEntries{nr.CurrentTerm, nr.Yo, nr.NextIndex[i] - 1, nr.Log[nr.NextIndex[i]-1].Term, entries, nr.CommitIndex} //cambiar arg del append entries (el nil está bien)
+	//}
 
 	//args := &ArgAppendEntries{nr.CurrentTerm, nr.Yo, nr.NextIndex[i] - 1, nr.Log[nr.NextIndex[i]-1].Term, entries, nr.CommitIndex}
 	reply := &Results{}
 	nr.enviarPeticionAppendEntries(i, args, reply)
+	nr.NextIndex[i]++
 	nr.Logger.Println("respuesta someterOperacion del nodo: ", i, " = ", reply, " miTerm = ", nr.CurrentTerm)
 }
 
@@ -451,12 +460,17 @@ func (nr *NodoRaft) AppendEntries(args *ArgAppendEntries,
 	results *Results) error {
 
 	results.Term = nr.CurrentTerm
+	if args.Entries != nil {
+		nr.Logger.Printf("primer if")
+	}
 	//Reply false if log doesn’t contain an entry at prevLogIndex whose term matches prevLogTerm (§5.3)
 	if len(nr.Log) > 0 && nr.Log[args.PrevLogIndex].Term != args.PrevLogTerm {
 		results.Success = false
 		return nil
 	}
-
+	if args.Entries != nil {
+		nr.Logger.Printf("segundo if")
+	}
 	//igual en Pedir Voto si el lider tiene un commit index menor le respondemos false pero nos actualizamos el term si es mayor
 	if nr.CommitIndex > args.LeaderCommit {
 		if args.Term > nr.CurrentTerm {
@@ -467,50 +481,66 @@ func (nr *NodoRaft) AppendEntries(args *ArgAppendEntries,
 		results.Success = false
 		return nil
 	}
-
+	if args.Entries != nil {
+		nr.Logger.Printf("tercer if")
+	}
 	if args.Entries != nil {
 		// If an existing entry conflicts with a new one (same index but different terms)
-		i := 0
-		if args.PrevLogIndex < nr.LastApplied {
-			for i < (nr.LastApplied-args.PrevLogIndex) && i < len(args.Entries) {
-				if nr.Log[args.PrevLogIndex+1+i].Term != args.Entries[i].Term {
-					nr.Mux.Lock()
-					nr.LastApplied = args.PrevLogIndex + i
-					nr.Mux.Unlock()
-					results.Success = false
-					return nil
+		if args.PrevLogIndex >= 1 {
+			i := 0
+			if args.PrevLogIndex+1 < nr.LastApplied {
+				for i < (nr.LastApplied-args.PrevLogIndex) && i < len(args.Entries) {
+					if nr.Log[args.PrevLogIndex+1+i].Term != args.Entries[i].Term {
+						nr.Mux.Lock()
+						nr.LastApplied = args.PrevLogIndex + i
+						nr.Logger.Printf("primer f")
+						nr.Mux.Unlock()
+						results.Success = false
+						return nil
+					}
+					i++
 				}
-				i++
-			}
 
-		} else if args.PrevLogIndex > nr.LastApplied {
-			results.Success = false
-			return nil
+			} else if args.PrevLogIndex+1 > nr.LastApplied {
+				nr.Logger.Printf("segunda f")
+				results.Success = false
+				return nil
+			}
 		}
 	}
 
 	//Append any new entries not already in the log
 	if args.Entries != nil {
-		i := 0
-		for i < len(args.Entries) { // corregir len of entries
+		nr.Logger.Printf("cuarto if")
+		for i := 0; i < len(args.Entries); i++ { // corregir len of entries
 			nr.Mux.Lock()
 			//nr.Log[args.PrevLogIndex+1+i] = args.Entries[i] es un append y hecho así dará error
-			nr.Log = insert(nr.Log, args.PrevLogIndex+1+i, args.Entries[i])
-			nr.LastApplied++
+			if args.PrevLogIndex == nr.LastApplied {
+				nr.Log = append(nr.Log, args.Entries[i])
+				nr.LastApplied++
+			} else {
+				nr.Log = insert(nr.Log, args.PrevLogIndex+1+i, args.Entries[i])
+				nr.LastApplied++
+			}
+
+			nr.Logger.Printf("contenido del PrevLogIndex+1+i: ", args.PrevLogIndex+1+i)
 			nr.Mux.Unlock()
-			i++
 		}
 		nr.Logger.Printf("contenido del Log: ", nr.Log)
 		nr.Logger.Printf("args:  tamaño len", len(args.Entries), " Entries:", args.Entries, " PrevLogIndex", args.PrevLogIndex)
 	}
-
+	if args.Entries != nil {
+		nr.Logger.Printf("quinto if")
+	}
 	// If leaderCommit > commitIndex, set commitIndex = min(leaderCommit, index of last new entry)
 	if args.LeaderCommit > nr.CommitIndex {
 		nr.Mux.Lock()
 		nr.CommitIndex = (int)(math.Min((float64)(args.LeaderCommit), (float64)(nr.LastApplied)))
 		nr.Mux.Unlock()
 	}
-
+	if args.Entries != nil {
+		nr.Logger.Printf("sexto if")
+	}
 	//1. Reply false if term < currentTerm (§5.1)
 	if args.Term > nr.CurrentTerm {
 		//Aceptar, cambiar de mandato y reset de voted for
@@ -624,8 +654,11 @@ func (nr *NodoRaft) enviarPeticionAppendEntriesTimeout(nodo int, args *ArgAppend
 }
 
 func (nr *NodoRaft) mandarHeartbeat(i int) {
+	nr.Logger.Println("last aplied es: ", nr.LastApplied)
+	nr.Logger.Println("el log es es: ", nr.Log)
+	//nr.Logger.Println("len del lod es: ", len(nr.Log), "last term del seguidor es: ", nr.Log[nr.NextIndex[i]-1].Term, " PrevLog index del seguidor es ", nr.NextIndex[i]-1)
 	args := &ArgAppendEntries{}
-	if len(nr.Log) > 0 {
+	if len(nr.Log) > 0 && nr.NextIndex[i] > 0 {
 		args = &ArgAppendEntries{nr.CurrentTerm, nr.Yo, nr.NextIndex[i] - 1, nr.Log[nr.NextIndex[i]-1].Term, nil, nr.CommitIndex} //cambiar arg del append entries (el nil está bien)
 	} else {
 		args = &ArgAppendEntries{nr.CurrentTerm, nr.Yo, 0, 0, nil, nr.CommitIndex} //cambiar arg del append entries (el nil está bien)
@@ -724,8 +757,19 @@ func (nr *NodoRaft) GestionNodo() {
 		if nr.Estado == LIDER {
 			nr.Logger.Println("Lider")
 			var escribir TipoOperacion = TipoOperacion{"escribir", "1", "a"}
-
+			var leer TipoOperacion = TipoOperacion{"leer", "2", "b"}
+			var lala TipoOperacion = TipoOperacion{"lala", "3", "c"}
 			nr.someterOperacion(escribir)
+
+			go func(msg string) {
+				time.Sleep(500 * time.Millisecond)
+				nr.someterOperacion(leer)
+			}("someter2")
+
+			go func(msg string) {
+				time.Sleep(1000 * time.Millisecond)
+				nr.someterOperacion(lala)
+			}("someter3")
 
 			//poner todos los next index iguales al commit mio
 			if nr.CommitIndex != 0 {
@@ -752,6 +796,7 @@ func (nr *NodoRaft) GestionNodo() {
 				if nAvanzados > len(nr.Nodos)/2 {
 					nr.CommitIndex++
 				}
+				nr.Logger.Println("Commit index = ", nr.CommitIndex)
 
 				for i := 0; i < len(nr.Nodos); i++ {
 					if i != nr.Yo && ((nr.NextIndex[i] >= nr.CommitIndex) || nr.CommitIndex == 0) { //no mandamos hearbeat ni a mi mismo ni a los nodos que estén recuperando la tabla

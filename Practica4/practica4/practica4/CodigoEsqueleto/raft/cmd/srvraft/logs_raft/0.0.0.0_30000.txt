@@ -1,23 +1,1016 @@
-0.0.0.0_30000 -> 20:55:43.909574 raft.go:180: logger initialized
-0.0.0.0_30000 -> 20:55:48.914521 raft.go:767: Seguidor
-0.0.0.0_30000 -> 20:55:50.997655 raft.go:779: Timeout seguidor
-0.0.0.0_30000 -> 20:55:50.997736 raft.go:786: Candidato: Empezando votacion
-0.0.0.0_30000 -> 20:55:50.997784 raft.go:581: enviando peticion de voto al nodo  2
-0.0.0.0_30000 -> 20:55:50.997835 raft.go:581: enviando peticion de voto al nodo  1
-0.0.0.0_30000 -> 20:55:50.999296 raft.go:684: respuesta recibida del nodo:  1  =  &{1 true}  miTerm =  1
-0.0.0.0_30000 -> 20:55:50.999338 raft.go:690: votos++
-0.0.0.0_30000 -> 20:55:50.999345 raft.go:699: Done antes de vottacion
-0.0.0.0_30000 -> 20:55:50.999349 raft.go:701: Done despues de vottacion
-0.0.0.0_30000 -> 20:55:50.999353 raft.go:803: Votacion teminada antes de que acabe el tiempo
-0.0.0.0_30000 -> 20:55:50.999356 raft.go:725: Lider
-0.0.0.0_30000 -> 20:55:50.999376 raft.go:289: contenido del Log: %!(EXTRA []raft.EntradaLog=[{0 1 {escribir 1 a}}])
-0.0.0.0_30000 -> 20:55:50.999382 raft.go:599: enviando enviarPeticionAppendEntries al nodo  2
-0.0.0.0_30000 -> 20:55:50.999419 raft.go:599: enviando enviarPeticionAppendEntries al nodo  1
-0.0.0.0_30000 -> 20:55:51.001127 raft.go:253: respuesta someterOperacion del nodo:  1  =  &{1 true}  miTerm =  1
-0.0.0.0_30000 -> 20:55:51.001154 raft.go:684: respuesta recibida del nodo:  2  =  &{1 true}  miTerm =  1
-0.0.0.0_30000 -> 20:55:51.001317 raft.go:690: votos++
-0.0.0.0_30000 -> 20:55:51.001319 raft.go:699: Done antes de vottacion
-0.0.0.0_30000 -> 20:55:51.001322 raft.go:701: Done despues de vottacion
-0.0.0.0_30000 -> 20:55:51.001477 raft.go:253: respuesta someterOperacion del nodo:  2  =  &{1 true}  miTerm =  1
-0.0.0.0_30000 -> 20:55:51.199871 raft.go:759: Se va a mandar heartbeat a  1
-0.0.0.0_30000 -> 20:55:51.199989 raft.go:759: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:17:48.771586 raft.go:180: logger initialized
+0.0.0.0_30000 -> 16:17:53.774147 raft.go:812: Seguidor
+0.0.0.0_30000 -> 16:17:55.856530 raft.go:824: Timeout seguidor
+0.0.0.0_30000 -> 16:17:55.856689 raft.go:831: Candidato: Empezando votacion
+0.0.0.0_30000 -> 16:17:55.856780 raft.go:611: enviando peticion de voto al nodo  2
+0.0.0.0_30000 -> 16:17:55.856960 raft.go:611: enviando peticion de voto al nodo  1
+0.0.0.0_30000 -> 16:17:55.858350 raft.go:717: respuesta recibida del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:55.858432 raft.go:723: votos++
+0.0.0.0_30000 -> 16:17:55.858439 raft.go:732: Done antes de vottacion
+0.0.0.0_30000 -> 16:17:55.858443 raft.go:734: Done despues de vottacion
+0.0.0.0_30000 -> 16:17:55.858446 raft.go:848: Votacion teminada antes de que acabe el tiempo
+0.0.0.0_30000 -> 16:17:55.858450 raft.go:758: Lider
+0.0.0.0_30000 -> 16:17:55.858467 raft.go:298: contenido del Log: %!(EXTRA []raft.EntradaLog=[{0 1 {escribir 1 a}}])
+0.0.0.0_30000 -> 16:17:55.858376 raft.go:717: respuesta recibida del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:55.858478 raft.go:723: votos++
+0.0.0.0_30000 -> 16:17:55.858480 raft.go:732: Done antes de vottacion
+0.0.0.0_30000 -> 16:17:55.858483 raft.go:734: Done despues de vottacion
+0.0.0.0_30000 -> 16:17:55.858495 raft.go:250: Args del someter al nodo  1 :  &{1 0 0 0 [{0 1 {escribir 1 a}}] 0}
+0.0.0.0_30000 -> 16:17:55.858676 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:17:55.858567 raft.go:250: Args del someter al nodo  2 :  &{1 0 0 0 [{0 1 {escribir 1 a}}] 0}
+0.0.0.0_30000 -> 16:17:55.858891 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:17:55.859568 raft.go:262: respuesta someterOperacion del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:55.861342 raft.go:262: respuesta someterOperacion del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:56.059202 raft.go:799: Commit index =  0
+0.0.0.0_30000 -> 16:17:56.059612 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:17:56.060362 raft.go:657: last aplied es:  1
+0.0.0.0_30000 -> 16:17:56.065466 raft.go:658: el log es es:  [{0 1 {escribir 1 a}}]
+0.0.0.0_30000 -> 16:17:56.065478 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:17:56.065360 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:17:56.066189 raft.go:657: last aplied es:  1
+0.0.0.0_30000 -> 16:17:56.066207 raft.go:658: el log es es:  [{0 1 {escribir 1 a}}]
+0.0.0.0_30000 -> 16:17:56.066210 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:17:56.266912 raft.go:799: Commit index =  0
+0.0.0.0_30000 -> 16:17:56.267011 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:17:56.267030 raft.go:657: last aplied es:  1
+0.0.0.0_30000 -> 16:17:56.267640 raft.go:658: el log es es:  [{0 1 {escribir 1 a}}]
+0.0.0.0_30000 -> 16:17:56.267658 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:17:56.267074 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:17:56.267919 raft.go:657: last aplied es:  1
+0.0.0.0_30000 -> 16:17:56.267950 raft.go:658: el log es es:  [{0 1 {escribir 1 a}}]
+0.0.0.0_30000 -> 16:17:56.267992 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:17:56.361346 raft.go:298: contenido del Log: %!(EXTRA []raft.EntradaLog=[{0 1 {escribir 1 a}} {0 1 {leer 2 b}}])
+0.0.0.0_30000 -> 16:17:56.361442 raft.go:250: Args del someter al nodo  2 :  &{1 0 0 1 [{0 1 {leer 2 b}}] 0}
+0.0.0.0_30000 -> 16:17:56.361448 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:17:56.361575 raft.go:250: Args del someter al nodo  1 :  &{1 0 0 1 [{0 1 {leer 2 b}}] 0}
+0.0.0.0_30000 -> 16:17:56.361643 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:17:56.469209 raft.go:799: Commit index =  0
+0.0.0.0_30000 -> 16:17:56.469436 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:17:56.469448 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:17:56.469457 raft.go:657: last aplied es:  2
+0.0.0.0_30000 -> 16:17:56.469499 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}}]
+0.0.0.0_30000 -> 16:17:56.469508 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:17:56.469582 raft.go:657: last aplied es:  2
+0.0.0.0_30000 -> 16:17:56.469659 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}}]
+0.0.0.0_30000 -> 16:17:56.469667 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:17:56.611326 raft.go:262: respuesta someterOperacion del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:56.611403 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:56.611482 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:56.611607 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:56.670195 raft.go:799: Commit index =  0
+0.0.0.0_30000 -> 16:17:56.670283 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:17:56.670329 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:17:56.670341 raft.go:657: last aplied es:  2
+0.0.0.0_30000 -> 16:17:56.670370 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}}]
+0.0.0.0_30000 -> 16:17:56.670427 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:17:56.670486 raft.go:657: last aplied es:  2
+0.0.0.0_30000 -> 16:17:56.670564 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}}]
+0.0.0.0_30000 -> 16:17:56.670571 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:17:56.671442 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:56.859557 raft.go:298: contenido del Log: %!(EXTRA []raft.EntradaLog=[{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}])
+0.0.0.0_30000 -> 16:17:56.859683 raft.go:250: Args del someter al nodo  2 :  &{1 0 0 1 [{0 1 {lala 3 c}}] 0}
+0.0.0.0_30000 -> 16:17:56.859692 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:17:56.859761 raft.go:250: Args del someter al nodo  1 :  &{1 0 1 1 [{0 1 {lala 3 c}}] 0}
+0.0.0.0_30000 -> 16:17:56.859776 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:17:56.861443 raft.go:262: respuesta someterOperacion del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:56.874198 raft.go:799: Commit index =  0
+0.0.0.0_30000 -> 16:17:56.874243 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:17:56.874248 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:17:56.874253 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:17:56.874276 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:17:56.874280 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:17:56.874371 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:17:56.874413 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:17:56.874417 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:17:56.875065 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:57.074535 raft.go:799: Commit index =  0
+0.0.0.0_30000 -> 16:17:57.074678 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:17:57.077843 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:17:57.077937 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:17:57.077944 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:17:57.077882 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:17:57.078352 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:17:57.078387 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:17:57.078392 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:17:57.079080 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:57.278539 raft.go:799: Commit index =  0
+0.0.0.0_30000 -> 16:17:57.278674 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:17:57.278711 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:17:57.278720 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:17:57.278755 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:17:57.278761 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:17:57.278848 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:17:57.278931 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:17:57.278938 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:17:57.280019 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:57.479006 raft.go:799: Commit index =  0
+0.0.0.0_30000 -> 16:17:57.479077 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:17:57.479086 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:17:57.479092 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:17:57.479116 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:17:57.479120 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:17:57.479141 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:17:57.479174 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:17:57.479177 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:17:57.479962 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:57.679249 raft.go:799: Commit index =  0
+0.0.0.0_30000 -> 16:17:57.679325 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:17:57.679335 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:17:57.679349 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:17:57.679373 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:17:57.679377 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:17:57.679378 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:17:57.679410 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:17:57.679414 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:17:57.680553 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:57.879734 raft.go:799: Commit index =  0
+0.0.0.0_30000 -> 16:17:57.879823 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:17:57.879873 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:17:57.879919 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:17:57.879947 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:17:57.879951 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:17:57.880188 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:17:57.880254 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:17:57.880260 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:17:57.881110 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:57.919645 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:57.919756 raft.go:262: respuesta someterOperacion del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:57.919974 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:57.920077 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:57.920080 raft.go:262: respuesta someterOperacion del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:57.920112 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:57.920390 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:57.920371 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:57.920517 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:57.920556 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:57.920721 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:57.921028 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:58.080287 raft.go:799: Commit index =  0
+0.0.0.0_30000 -> 16:17:58.080383 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:17:58.080391 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:17:58.080396 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:17:58.080419 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:17:58.080422 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:17:58.080569 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:17:58.080587 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:17:58.080589 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:17:58.081649 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:58.081854 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:58.280711 raft.go:799: Commit index =  1
+0.0.0.0_30000 -> 16:17:58.280895 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:17:58.280924 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:17:58.280931 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:17:58.280965 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:17:58.280971 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:17:58.281197 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:17:58.281392 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:17:58.281409 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:17:58.282435 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:58.282417 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:58.483468 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:17:58.483562 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:17:58.483571 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:17:58.483576 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:17:58.483601 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:17:58.483605 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:17:58.483732 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:17:58.483762 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:17:58.483764 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:17:58.484563 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:58.484601 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:58.684255 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:17:58.684296 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:17:58.684301 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:17:58.684306 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:17:58.684338 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:17:58.684348 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:17:58.684400 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:17:58.684434 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:17:58.684442 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:17:58.685406 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:58.685660 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:58.885016 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:17:58.885061 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:17:58.885067 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:17:58.885072 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:17:58.885086 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:17:58.885101 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:17:58.885376 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:17:58.885166 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:17:58.885489 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:17:58.886263 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:58.886312 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:59.086283 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:17:59.086364 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:17:59.086372 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:17:59.086377 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:17:59.086400 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:17:59.086417 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:17:59.086531 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:17:59.086548 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:17:59.086553 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:17:59.087201 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:59.091629 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:59.286700 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:17:59.286917 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:17:59.286932 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:17:59.286968 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:17:59.286996 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:17:59.287000 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:17:59.287156 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:17:59.287222 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:17:59.287228 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:17:59.288516 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:59.289976 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:59.488429 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:17:59.488472 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:17:59.488478 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:17:59.488483 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:17:59.488507 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:17:59.488510 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:17:59.488658 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:17:59.488699 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:17:59.488703 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:17:59.489647 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:59.490153 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:59.689387 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:17:59.689469 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:17:59.689483 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:17:59.691690 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:17:59.691733 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:17:59.691737 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:17:59.691878 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:17:59.691913 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:17:59.691916 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:17:59.694019 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:59.694158 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:59.889858 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:17:59.889981 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:17:59.890034 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:17:59.890144 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:17:59.890210 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:17:59.890218 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:17:59.890122 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:17:59.890634 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:17:59.890638 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:17:59.891759 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:17:59.891838 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:00.090797 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:00.090892 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:00.090904 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:00.090909 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:00.090951 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:00.090954 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:00.090975 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:00.091025 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:00.091029 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:00.096762 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:00.096731 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:00.292003 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:00.292095 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:00.292107 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:00.292143 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:00.292198 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:00.292203 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:00.292114 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:00.292361 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:00.292368 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:00.293249 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:00.293591 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:00.492925 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:00.493306 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:00.493389 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:00.493404 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:00.493437 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:00.493488 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:00.493579 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:00.493611 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:00.493615 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:00.494872 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:00.495144 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:00.693875 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:00.693918 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:00.693923 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:00.693928 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:00.693966 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:00.693970 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:00.694019 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:00.694051 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:00.694055 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:00.694705 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:00.695029 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:00.894220 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:00.894264 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:00.894270 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:00.894275 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:00.894306 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:00.894310 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:00.894358 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:00.894394 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:00.894397 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:00.914420 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:00.915599 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:01.095049 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:01.095122 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:01.095132 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:01.095137 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:01.095161 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:01.095165 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:01.095245 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:01.095278 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:01.095282 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:01.097116 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:01.097239 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:01.295255 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:01.295337 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:01.295346 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:01.295351 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:01.295374 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:01.295378 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:01.295498 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:01.295514 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:01.295516 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:01.296605 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:01.296688 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:01.496676 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:01.496761 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:01.496771 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:01.496776 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:01.496809 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:01.496813 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:01.496899 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:01.496909 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:01.499978 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:01.501180 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:01.501303 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:01.697621 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:01.697803 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:01.697828 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:01.697836 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:01.697878 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:01.697881 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:01.699643 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:01.699676 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:01.699680 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:01.702876 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:01.703099 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:01.899197 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:01.899278 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:01.899303 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:01.899469 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:01.899477 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:01.899384 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:01.899989 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:01.900020 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:01.900024 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:01.900565 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:01.904477 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:02.100509 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:02.100595 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:02.100603 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:02.100608 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:02.100661 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:02.100695 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:02.100699 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:02.100633 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:02.100963 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:02.101821 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:02.102211 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:02.302772 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:02.302857 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:02.302864 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:02.302883 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:02.302909 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:02.302913 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:02.303155 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:02.303194 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:02.303198 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:02.304412 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:02.304590 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:02.505292 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:02.505331 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:02.505337 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:02.505342 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:02.505365 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:02.505369 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:02.505466 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:02.505496 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:02.505499 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:02.506349 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:02.506330 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:02.706633 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:02.706758 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:02.706798 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:02.706877 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:02.706908 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:02.706912 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:02.706942 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:02.706973 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:02.706977 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:02.710217 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:02.710275 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:02.907250 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:02.907290 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:02.907297 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:02.907312 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:02.907338 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:02.907342 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:02.907431 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:02.907471 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:02.907475 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:02.910746 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:02.911040 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:03.107890 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:03.107934 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:03.107994 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:03.108136 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:03.108143 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:03.111802 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:03.112490 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:03.112509 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:03.112512 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:03.112682 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:03.113143 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:03.314179 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:03.314270 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:03.314283 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:03.314289 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:03.314296 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:03.314323 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:03.314330 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:03.314329 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:03.314336 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:03.315613 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:03.315774 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:03.515068 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:03.515124 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:03.515135 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:03.515160 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:03.515202 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:03.515224 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:03.515212 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:03.515254 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:03.515258 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:03.516406 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:03.517712 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:03.715395 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:03.715437 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:03.715443 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:03.715448 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:03.715473 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:03.715487 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:03.715583 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:03.715594 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:03.715596 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:03.716882 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:03.720293 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:03.915564 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:03.915642 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:03.915652 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:03.915657 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:03.915681 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:03.915700 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:03.915681 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:03.915713 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:03.915724 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:03.920340 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:03.920379 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:04.115871 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:04.115938 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:04.115947 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:04.115952 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:04.115977 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:04.115980 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:04.116003 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:04.116035 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:04.116039 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:04.117081 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:04.117115 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:04.316755 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:04.316831 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:04.317391 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:04.317358 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:04.317468 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:04.317507 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:04.317474 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:04.317512 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:04.317486 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:04.318163 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:04.319012 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:04.517760 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:04.517876 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:04.517902 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:04.517908 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:04.517936 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:04.517940 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:04.518067 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:04.518113 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:04.518118 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:04.523763 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:04.525064 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:04.718842 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:04.718943 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:04.718956 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:04.718963 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:04.719000 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:04.719006 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:04.719040 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:04.719128 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:04.719134 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:04.720762 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:04.721624 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:04.920516 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:04.920728 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:04.920747 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:04.920773 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:04.921175 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:04.921187 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:04.920759 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:04.921403 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:04.921408 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:04.924799 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:04.925063 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:05.122211 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:05.122250 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:05.122256 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:05.122261 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:05.122285 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:05.122289 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:05.122503 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:05.122542 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:05.122545 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:05.130627 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:05.131149 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:05.322746 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:05.322838 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:05.322882 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:05.322941 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:05.322978 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:05.322984 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:05.323017 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:05.323066 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:05.323073 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:05.325354 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:05.325577 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:05.523441 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:05.523525 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:05.523534 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:05.523539 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:05.523571 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:05.523575 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:05.523695 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:05.523793 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:05.523803 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:05.524948 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:05.524942 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:05.724279 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:05.724460 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:05.724471 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:05.724477 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:05.724502 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:05.724505 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:05.724634 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:05.724669 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:05.724673 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:05.725905 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:05.726258 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:05.925618 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:05.925725 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:05.925743 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:05.925765 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:05.925817 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:05.925823 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:05.925825 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:05.925848 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:05.925855 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:05.926903 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:05.927435 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:06.126719 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:06.126785 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:06.126793 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:06.126798 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:06.126823 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:06.126827 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:06.126808 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:06.126845 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:06.126849 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:06.128178 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:06.128210 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:06.327064 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:06.327121 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:06.327127 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:06.327131 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:06.327155 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:06.327158 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:06.327214 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:06.327325 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:06.327331 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:06.328321 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:06.328470 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:06.527407 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:06.527453 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:06.527459 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:06.527464 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:06.527489 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:06.527493 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:06.527758 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:06.527795 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:06.527798 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:06.528992 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:06.529257 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:06.728503 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:06.728629 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:06.728640 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:06.728661 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:06.728686 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:06.728689 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:06.728783 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:06.728815 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:06.729445 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:06.730318 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:06.730892 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:06.930298 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:06.930354 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:06.930364 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:06.930371 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:06.930403 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:06.930408 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:06.930502 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:06.930529 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:06.930533 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:06.931652 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:06.931839 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:07.130667 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:07.130803 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:07.130813 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:07.130829 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:07.130855 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:07.130860 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:07.130962 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:07.131240 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:07.131244 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:07.131440 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:07.132185 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:07.331394 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:07.331475 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:07.331486 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:07.331491 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:07.331515 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:07.331519 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:07.335277 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:07.335345 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:07.335363 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:07.342251 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:07.342888 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:07.532575 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:07.532733 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:07.532757 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:07.532806 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:07.532840 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:07.532844 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:07.532854 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:07.532864 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:07.533074 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:07.534860 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:07.535246 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:07.733669 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:07.733839 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:07.733850 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:07.733857 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:07.733890 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:07.733895 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:07.734037 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:07.734049 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:07.734052 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:07.736218 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:07.736267 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:07.934295 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:07.934337 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:07.934391 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:07.934408 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:07.934431 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:07.934445 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:07.934451 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:07.934463 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:07.934472 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:07.935040 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:07.935734 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:08.135007 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:08.135122 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:08.135134 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:08.135142 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:08.135181 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:08.135187 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:08.135217 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:08.135256 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:08.135359 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:08.136459 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:08.136474 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:08.337169 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:08.337322 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:08.337336 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:08.337342 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:08.337367 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:08.337371 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:08.337452 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:08.337464 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:08.337467 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:08.339024 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:08.339228 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:08.538251 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:08.538299 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:08.538304 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:08.538309 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:08.538332 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:08.538335 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:08.538437 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:08.538449 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:08.538452 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:08.539384 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:08.539536 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:08.738743 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:08.738830 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:08.738839 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:08.738844 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:08.738869 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:08.738873 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:08.738873 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:08.738909 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:08.738913 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:08.742891 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:08.743116 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:08.939038 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:08.939392 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:08.939532 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:08.939546 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:08.939660 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:08.939714 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:08.939719 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:08.939739 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:08.939746 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:08.941222 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:08.943049 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:09.141396 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:09.141470 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:09.141480 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:09.141490 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:09.141548 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:09.141533 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:09.141540 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:09.141586 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:09.141591 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:09.145345 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:09.145417 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:09.344126 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:09.344209 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:09.344218 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:09.344223 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:09.344255 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:09.344259 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:09.344406 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:09.344444 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:09.344446 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:09.345703 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:09.345846 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:09.545315 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:09.545399 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:09.545410 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:09.545422 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:09.545451 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:09.545455 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:09.545880 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:09.546286 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:09.546303 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:09.546262 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:09.550245 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:09.745838 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:09.745938 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:09.745956 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:09.746001 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:09.746038 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:09.746044 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:09.746045 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:09.746066 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:09.746079 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:09.746880 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:09.746943 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:09.947168 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:09.947363 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:09.947409 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:09.947435 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:09.947461 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:09.947466 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:09.947767 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:09.947858 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:09.947868 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:09.948439 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:09.948814 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:10.147508 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:10.147603 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:10.147612 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:10.147619 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:10.147773 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:10.147781 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:10.147863 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:10.147894 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:10.147899 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:10.149549 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:10.149597 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:10.348873 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:10.349391 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:10.349435 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:10.349532 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:10.349592 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:10.349590 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:10.349597 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:10.349626 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:10.349632 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:10.350631 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:10.350682 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:10.550228 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:10.550273 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:10.550279 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:10.550284 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:10.550308 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:10.550312 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:10.550407 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:10.550417 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:10.550421 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:10.551360 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:10.552166 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:10.751269 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:10.751389 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:10.751403 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:10.751416 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:10.751439 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:10.751443 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:10.751494 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:10.751524 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:10.751528 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:10.752178 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:10.752220 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:10.951557 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:10.951600 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:10.951606 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:10.951612 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:10.951635 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:10.951639 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:10.951680 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:10.951709 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:10.951713 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:10.954917 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:10.954960 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:11.151839 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:11.151916 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:11.151927 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:11.151932 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:11.151958 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:11.151962 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:11.151928 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:11.151971 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:11.151975 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:11.154997 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:11.156132 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:11.352888 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:11.353073 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:11.353315 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:11.353373 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:11.353420 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:11.353424 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:11.353631 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:11.353665 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:11.353670 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:11.359358 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:11.359330 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:11.554043 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:11.554086 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:11.554093 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:11.554106 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:11.554309 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:11.554320 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:11.554531 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:11.554567 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:11.554570 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:11.555421 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:11.556014 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:11.757498 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:11.757545 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:11.757552 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:11.757558 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:11.757591 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:11.757596 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:11.757627 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:11.757661 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:11.757665 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:11.758623 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:11.759192 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:11.958387 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:11.958430 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:11.958436 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:11.958441 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:11.958465 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:11.958469 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:11.958570 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:11.959466 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:11.959514 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:11.959435 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:11.960341 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:12.158589 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:12.158635 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:12.158654 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:12.158659 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:12.158684 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:12.158688 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:12.158762 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:12.158795 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:12.158800 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:12.161896 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:12.162309 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:12.361430 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:12.361580 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:12.361595 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:12.361602 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:12.361636 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:12.361728 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:12.361837 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:12.362000 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:12.362004 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:12.363178 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:12.363646 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:12.562615 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:12.562842 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:12.562853 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:12.562891 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:12.562914 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:12.562919 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:12.563021 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:12.563057 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:12.563061 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:12.564047 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:12.564084 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:12.763588 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:12.763718 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:12.763781 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:12.763799 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:12.763823 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:12.763827 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:12.766444 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:12.768013 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:12.768020 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:12.768413 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:12.769909 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:12.964601 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:12.964693 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:12.964704 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:12.964708 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:12.964737 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:12.964741 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:12.964822 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:12.964894 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:12.964901 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:12.966157 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:12.966159 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:13.165794 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:13.165865 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:13.165876 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:13.165881 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:13.165907 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:13.165912 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:13.165968 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:13.166003 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:13.166007 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:13.166780 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:13.166925 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:13.367476 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:13.367634 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:13.367649 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:13.367656 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:13.367682 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:13.367687 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:13.367922 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:13.367942 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:13.367946 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:13.369181 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:13.369679 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:13.568779 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:13.569371 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:13.569445 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:13.569468 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:13.569488 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:13.569492 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:13.569511 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:13.569541 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:13.569545 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:13.570252 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:13.570549 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:13.770858 raft.go:799: Commit index =  2
+0.0.0.0_30000 -> 16:18:13.771056 raft.go:804: Se va a mandar heartbeat a  1
+0.0.0.0_30000 -> 16:18:13.771069 raft.go:804: Se va a mandar heartbeat a  2
+0.0.0.0_30000 -> 16:18:13.771075 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:13.771100 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:13.771108 raft.go:629: enviando enviarPeticionAppendEntries al nodo  2
+0.0.0.0_30000 -> 16:18:13.771341 raft.go:657: last aplied es:  3
+0.0.0.0_30000 -> 16:18:13.771501 raft.go:658: el log es es:  [{0 1 {escribir 1 a}} {0 1 {leer 2 b}} {0 1 {lala 3 c}}]
+0.0.0.0_30000 -> 16:18:13.771507 raft.go:629: enviando enviarPeticionAppendEntries al nodo  1
+0.0.0.0_30000 -> 16:18:13.772289 raft.go:669: respuesta heartbeat del nodo:  2  =  &{1 true}  miTerm =  1
+0.0.0.0_30000 -> 16:18:13.772446 raft.go:669: respuesta heartbeat del nodo:  1  =  &{1 true}  miTerm =  1
