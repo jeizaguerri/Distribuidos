@@ -1,0 +1,531 @@
+0.0.0.0_30001 -> 20:27:46.082341 raft.go:182: logger initialized
+0.0.0.0_30001 -> 20:27:51.085012 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:51.129520 raft.go:385: Peticion de voto recibida de  0 con term = 1  Mi term:  0 ult votado: -1
+0.0.0.0_30001 -> 20:27:51.129534 raft.go:433: antes del done aceptar
+0.0.0.0_30001 -> 20:27:51.129538 raft.go:435: despues del done aceptar
+0.0.0.0_30001 -> 20:27:51.129541 raft.go:439: Reply al nodo:  0  =  true
+0.0.0.0_30001 -> 20:27:51.130407 raft.go:468: primer if
+0.0.0.0_30001 -> 20:27:51.130414 raft.go:476: segundo if
+0.0.0.0_30001 -> 20:27:51.130417 raft.go:489: tercer if
+0.0.0.0_30001 -> 20:27:51.130420 raft.go:518: cuarto if
+0.0.0.0_30001 -> 20:27:51.130424 raft.go:530: contenido del PrevLogIndex+1+i: %!(EXTRA int=1)
+0.0.0.0_30001 -> 20:27:51.130435 raft.go:533: contenido del Log: %!(EXTRA []raft.EntradaLog=[{0 1 {escribir 1 a}}])
+0.0.0.0_30001 -> 20:27:51.130443 raft.go:534: args:  tamaño len%!(EXTRA int=1, string= Entries:, []raft.EntradaLog=[{0 1 {escribir 1 a}}], string= PrevLogIndex, int=0)
+0.0.0.0_30001 -> 20:27:51.130447 raft.go:537: quinto if
+0.0.0.0_30001 -> 20:27:51.130449 raft.go:551: sexto if
+0.0.0.0_30001 -> 20:27:51.130452 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:51.130456 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:51.130476 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:51.130480 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:51.331101 raft.go:547: COMMIT INDEX: %!(EXTRA int=1)
+0.0.0.0_30001 -> 20:27:51.331208 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:51.331220 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:51.331263 raft.go:759: Operacion escribir: clave= 1  valor= a
+0.0.0.0_30001 -> 20:27:51.331280 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:51.331286 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:51.532726 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:51.532801 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:51.532845 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:51.532865 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:51.631348 raft.go:468: primer if
+0.0.0.0_30001 -> 20:27:51.631436 raft.go:476: segundo if
+0.0.0.0_30001 -> 20:27:51.631463 raft.go:489: tercer if
+0.0.0.0_30001 -> 20:27:51.631466 raft.go:518: cuarto if
+0.0.0.0_30001 -> 20:27:51.631480 raft.go:530: contenido del PrevLogIndex+1+i: %!(EXTRA int=1)
+0.0.0.0_30001 -> 20:27:51.631491 raft.go:533: contenido del Log: %!(EXTRA []raft.EntradaLog=[{0 1 {escribir 1 a}} {0 1 {escribir 2 b}}])
+0.0.0.0_30001 -> 20:27:51.631496 raft.go:534: args:  tamaño len%!(EXTRA int=1, string= Entries:, []raft.EntradaLog=[{0 1 {escribir 2 b}}], string= PrevLogIndex, int=0)
+0.0.0.0_30001 -> 20:27:51.631500 raft.go:537: quinto if
+0.0.0.0_30001 -> 20:27:51.631503 raft.go:551: sexto if
+0.0.0.0_30001 -> 20:27:51.631512 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:51.631670 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:51.634518 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:51.634537 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:51.733479 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:51.733529 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:51.733566 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:51.733571 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:51.934539 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:51.934561 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:51.934760 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:51.934773 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:52.134402 raft.go:468: primer if
+0.0.0.0_30001 -> 20:27:52.134423 raft.go:476: segundo if
+0.0.0.0_30001 -> 20:27:52.135026 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:52.135246 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:52.135320 raft.go:489: tercer if
+0.0.0.0_30001 -> 20:27:52.135331 raft.go:518: cuarto if
+0.0.0.0_30001 -> 20:27:52.135336 raft.go:530: contenido del PrevLogIndex+1+i: %!(EXTRA int=2)
+0.0.0.0_30001 -> 20:27:52.135344 raft.go:533: contenido del Log: %!(EXTRA []raft.EntradaLog=[{0 1 {escribir 1 a}} {0 1 {escribir 2 b}} {0 1 {leer 1 }}])
+0.0.0.0_30001 -> 20:27:52.135350 raft.go:534: args:  tamaño len%!(EXTRA int=1, string= Entries:, []raft.EntradaLog=[{0 1 {leer 1 }}], string= PrevLogIndex, int=1)
+0.0.0.0_30001 -> 20:27:52.135354 raft.go:537: quinto if
+0.0.0.0_30001 -> 20:27:52.135356 raft.go:551: sexto if
+0.0.0.0_30001 -> 20:27:52.135359 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:52.135363 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:52.135451 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:52.135487 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:52.135494 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:52.135496 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:52.335990 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:52.336048 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:52.336096 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:52.336102 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:52.542652 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:52.542740 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:52.542775 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:52.542780 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:52.739344 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:52.739365 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:52.739721 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:52.739738 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:52.938340 raft.go:547: COMMIT INDEX: %!(EXTRA int=2)
+0.0.0.0_30001 -> 20:27:52.938405 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:52.938416 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:52.938444 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:52.938449 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:52.938456 raft.go:759: Operacion escribir: clave= 2  valor= b
+0.0.0.0_30001 -> 20:27:53.139132 raft.go:547: COMMIT INDEX: %!(EXTRA int=3)
+0.0.0.0_30001 -> 20:27:53.139150 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:53.139154 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:53.139191 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:53.139196 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:53.139203 raft.go:766: Operacion leer: clave= 1  valor= a
+0.0.0.0_30001 -> 20:27:53.340423 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:53.340653 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:53.340690 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:53.340694 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:53.540853 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:53.540868 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:53.540899 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:53.540903 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:53.742848 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:53.742864 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:53.742950 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:53.743016 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:53.943174 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:53.943231 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:53.943262 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:53.943266 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:54.144162 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:54.144216 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:54.144287 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:54.144302 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:54.345028 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:54.345080 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:54.345119 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:54.345124 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:54.545565 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:54.545585 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:54.545614 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:54.545618 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:54.748871 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:54.748892 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:54.748929 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:54.748935 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:54.946131 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:54.946148 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:54.946246 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:54.946255 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:55.146529 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:55.146556 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:55.146697 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:55.146708 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:55.349319 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:55.349337 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:55.349372 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:55.349376 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:55.552175 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:55.552198 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:55.552301 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:55.552312 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:55.751506 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:55.751523 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:55.751818 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:55.751831 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:55.954542 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:55.954571 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:55.954707 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:55.954722 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:56.170471 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:56.170531 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:56.170569 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:56.170574 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:56.353422 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:56.353589 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:56.353755 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:56.353861 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:56.557431 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:56.557484 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:56.557517 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:56.557522 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:56.754346 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:56.757185 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:56.757265 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:56.757269 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:56.954452 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:56.954525 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:56.954604 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:56.954614 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:57.156655 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:57.156718 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:57.156753 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:57.156757 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:57.358494 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:57.358587 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:57.358621 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:57.358626 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:57.559647 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:57.560818 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:57.561118 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:57.561173 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:57.763134 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:57.763159 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:57.763458 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:57.763466 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:57.958968 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:57.958988 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:57.959126 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:57.959142 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:58.161537 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:58.161554 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:58.161631 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:58.161638 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:58.364107 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:58.364226 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:58.364264 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:58.364268 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:58.564272 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:58.564333 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:58.564366 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:58.564370 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:58.765525 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:58.765577 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:58.765617 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:58.765656 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:58.965749 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:58.965777 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:58.966022 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:58.966094 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:59.170479 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:59.171210 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:59.171219 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:59.171234 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:59.370442 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:59.370688 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:59.370775 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:59.370789 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:59.569561 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:59.569579 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:59.569607 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:59.569612 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:59.772218 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:59.772237 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:59.772261 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:59.772265 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:27:59.972642 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:59.972658 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:27:59.972683 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:27:59.972687 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:00.176777 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:00.176833 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:00.176908 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:00.176915 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:00.375084 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:00.375100 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:00.375230 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:00.375237 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:00.575123 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:00.575148 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:00.575187 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:00.575191 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:00.775823 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:00.775873 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:00.775929 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:00.775934 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:00.979439 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:00.979620 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:00.979786 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:00.979793 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:01.180597 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:01.180620 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:01.180736 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:01.180750 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:01.381048 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:01.381065 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:01.381099 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:01.381104 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:01.579266 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:01.579277 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:01.579568 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:01.579592 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:01.780017 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:01.780090 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:01.780191 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:01.780309 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:01.982350 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:01.982404 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:01.982478 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:01.982485 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:02.181574 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:02.181634 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:02.181688 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:02.181692 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:02.381810 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:02.381829 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:02.381861 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:02.381866 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:02.605087 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:02.605120 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:02.605201 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:02.605210 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:02.783745 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:02.783947 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:02.783984 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:02.783988 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:02.987409 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:02.987447 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:02.987672 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:02.987682 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:03.185310 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:03.185393 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:03.185429 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:03.185436 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:03.384951 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:03.384966 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:03.384996 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:03.385000 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:03.589071 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:03.589153 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:03.589186 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:03.589190 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:03.790253 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:03.790272 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:03.790301 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:03.790305 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:03.991411 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:03.991622 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:03.991817 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:03.992014 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:04.191659 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:04.192070 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:04.192174 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:04.192180 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:04.392997 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:04.393025 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:04.393069 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:04.393076 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:04.593220 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:04.593512 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:04.593648 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:04.593655 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:04.794168 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:04.794191 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:04.794226 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:04.794230 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:04.994094 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:04.994115 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:04.994241 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:04.994251 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:05.196380 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:05.196608 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:05.196834 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:05.196883 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:05.397830 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:05.397903 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:05.398013 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:05.398020 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:05.599542 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:05.599562 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:05.599594 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:05.599599 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:05.798934 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:05.798951 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:05.799056 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:05.799063 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:05.998877 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:05.998934 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:06.002782 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:06.002795 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:06.200357 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:06.200378 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:06.200460 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:06.200469 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:06.401055 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:06.401363 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:06.401561 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:06.401973 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:06.603672 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:06.603695 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:06.604080 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:06.604098 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:06.807850 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:06.808279 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:06.808340 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:06.808183 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:07.005220 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:07.005240 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:07.005292 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:07.005310 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:07.206914 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:07.206931 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:07.206964 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:07.206968 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:07.407896 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:07.407981 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:07.408024 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:07.408028 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:07.609509 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:07.609532 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:07.609607 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:07.609614 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:07.809520 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:07.809728 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:07.809813 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:07.809832 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:08.011415 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:08.011432 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:08.011459 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:08.011463 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:08.211201 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:08.211218 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:08.211283 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:08.211291 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:08.413194 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:08.413247 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:08.413310 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:08.413324 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:08.614266 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:08.614320 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:08.614347 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:08.614351 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:08.817156 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:08.817218 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:08.817513 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:08.817537 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:09.019701 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:09.020718 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:09.020801 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:09.020807 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:09.218099 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:09.218173 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:09.218216 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:09.218220 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:09.418591 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:09.418642 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:09.418675 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:09.418681 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:09.623292 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:09.623308 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:09.623372 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:09.623382 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:09.822001 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:09.822024 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:09.822067 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:09.822071 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:10.020565 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:10.020634 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:10.020667 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:10.020672 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:10.221291 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:10.221420 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:10.221460 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:10.221464 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:10.421871 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:10.421964 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:10.421966 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:10.421980 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:10.621367 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:10.621391 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:10.621476 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:10.621484 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:10.823167 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:10.823182 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:10.823214 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:10.823218 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:11.023123 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:11.023143 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:11.023172 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:11.023177 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:11.224654 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:11.224831 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:11.224884 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:11.224889 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:11.424860 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:11.424941 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:11.424977 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:11.424985 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:11.624924 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:11.625010 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:11.625101 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:11.625108 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:11.825832 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:11.825875 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:11.826000 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:11.826040 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:12.028238 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:12.028463 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:12.028503 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:12.028507 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:12.226661 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:12.226698 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:12.226902 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:12.226942 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:12.427020 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:12.427085 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:12.427118 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:12.427122 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:12.629440 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:12.629456 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:12.629484 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:12.629488 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:12.829122 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:12.831017 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:12.831199 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:12.831280 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:13.029815 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:13.029895 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:13.029937 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:13.029943 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:13.230918 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:13.230984 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:13.231049 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:13.231056 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:13.435668 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:13.435684 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:13.435713 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:13.435717 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:13.634706 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:13.634737 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:13.634768 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:13.634772 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:13.832546 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:13.832620 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:13.832740 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:13.832750 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:14.032769 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:14.032861 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:14.032938 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:14.032944 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:14.233820 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:14.233838 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:14.233932 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:14.233939 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:14.435583 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:14.435641 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:14.437372 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:14.437383 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:14.638453 raft.go:573: Done antes de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:14.638474 raft.go:575: Done despues de appendEntries sin cambio de mandato
+0.0.0.0_30001 -> 20:28:14.638569 raft.go:853: Heartbeat recibido y aceptado
+0.0.0.0_30001 -> 20:28:14.638581 raft.go:849: Seguidor
+0.0.0.0_30001 -> 20:28:17.365617 raft.go:861: Timeout seguidor
+0.0.0.0_30001 -> 20:28:17.365703 raft.go:868: Candidato: Empezando votacion
+0.0.0.0_30001 -> 20:28:17.365727 raft.go:885: Votacion teminada antes de que acabe el tiempo
+0.0.0.0_30001 -> 20:28:17.365731 raft.go:868: Candidato: Empezando votacion
+0.0.0.0_30001 -> 20:28:17.365736 raft.go:717: Longitud del log > 0
+0.0.0.0_30001 -> 20:28:17.365752 raft.go:620: enviando peticion de voto al nodo  2
+0.0.0.0_30001 -> 20:28:17.365857 raft.go:717: Longitud del log > 0
+0.0.0.0_30001 -> 20:28:17.365863 raft.go:620: enviando peticion de voto al nodo  0
+0.0.0.0_30001 -> 20:28:17.365890 raft.go:717: Longitud del log > 0
+0.0.0.0_30001 -> 20:28:17.365895 raft.go:620: enviando peticion de voto al nodo  2
+0.0.0.0_30001 -> 20:28:17.365915 raft.go:717: Longitud del log > 0
+0.0.0.0_30001 -> 20:28:17.365919 raft.go:620: enviando peticion de voto al nodo  0
